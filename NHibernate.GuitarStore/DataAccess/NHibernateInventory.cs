@@ -34,7 +34,7 @@ namespace NHibernate.GuitarStore.DataAccess
                 try
                 {
                     IList<Inventory> result = Session.CreateCriteria(typeof (Inventory))
-                        .Add(Restrictions.Eq("TypeId",Id))
+                        .Add(Restrictions.Eq("TypeId", Id))
                         .List<Inventory>();
                     transaction.Commit();
                     return result;

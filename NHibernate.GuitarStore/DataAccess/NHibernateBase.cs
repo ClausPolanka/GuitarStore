@@ -10,11 +10,35 @@ namespace NHibernate.GuitarStore.DataAccess
 {
     public class NHibernateBase
     {
+        private static ISession session;
+        private static IStatelessSession statelessSession;
         protected static ISessionFactory SessionFactory { get; set; }
         private static Configuration Configuration { get; set; }
 
-        private static ISession session;
-        private static IStatelessSession statelessSession;
+        public static ISession Session
+        {
+            get
+            {
+                if (session == null)
+                    session = SessionFactory.OpenSession();
+                return session;
+            }
+        }
+
+        public static IStatelessSession StatelessSession
+        {
+            get
+            {
+                if (statelessSession == null)
+                    statelessSession = SessionFactory.OpenStatelessSession();
+                return statelessSession;
+            }
+        }
+
+        public NHibernateBase()
+        {
+            log4net.Config.XmlConfigurator.Configure();
+        }
 
         public void Initialize(string assembly)
         {
@@ -53,30 +77,6 @@ namespace NHibernate.GuitarStore.DataAccess
                     transaction.Rollback();
                     throw;
                 }
-            }
-        }
-
-        public static ISession Session
-        {
-            get
-            {
-                if (session == null)
-                {
-                    session = SessionFactory.OpenSession();
-                }
-                return session;
-            }
-        }
-
-        public static IStatelessSession StatelessSession
-        {
-            get
-            {
-                if (statelessSession == null)
-                {
-                    statelessSession = SessionFactory.OpenStatelessSession();
-                }
-                return statelessSession;
             }
         }
     }

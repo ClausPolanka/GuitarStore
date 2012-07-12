@@ -13,7 +13,7 @@ namespace NHibernate.GuitarStore.Console
         {
             try
             {
-                NHibernateBase NHB = new NHibernateBase();
+                var NHB = new NHibernateBase();
                 NHB.Initialize("NHibernate.GuitarStore");
                 System.Console.WriteLine("NHibernate.GuitarStore assembly initialized.");
                 System.Console.ReadLine();
@@ -26,9 +26,7 @@ namespace NHibernate.GuitarStore.Console
             {
                 string Message = ex.Message;
                 if (ex.InnerException != null)
-                {
                     Message += " - InnerException: " + ex.InnerException.Message;
-                }
                 System.Console.WriteLine();
                 System.Console.WriteLine("***** ERROR *****");
                 System.Console.WriteLine(Message);

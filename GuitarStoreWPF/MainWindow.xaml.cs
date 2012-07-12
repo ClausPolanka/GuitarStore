@@ -12,36 +12,35 @@ namespace GuitarStoreWPF
         public MainWindow()
         {
             InitializeComponent();
-            NHibernateBase nhb = new NHibernateBase();
+            var nhb = new NHibernateBase();
             nhb.Initialize("NHibernate.GuitarStore");
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             PopulateComboBox();
-            NHibernateInventory nhi = new NHibernateInventory();
+            var nhi = new NHibernateInventory();
             IList<Inventory> list = nhi.ExecuteICriteriaOrderBy("Builder");
             dataGridInventory.ItemsSource = list;
+
             if (list != null)
-            {
-                HideTechnicalInformation();
-            }
+                HideColumnsWhichContainTechnicalInformation();
         }
 
         private void PopulateComboBox()
         {
-            NHibernateBase nhb = new NHibernateBase();
+            var nhb = new NHibernateBase();
             IList<Guitar> GuitarTypes = nhb.ExecuteICriteria<Guitar>();
-            foreach (var item in GuitarTypes)
+            foreach (Guitar item in GuitarTypes)
             {
-                Guitar guitar = new Guitar(item.Id, item.Type);
+                var guitar = new Guitar(item.Id, item.Type);
                 comboBoxGuitarTypes.DisplayMemberPath = "Type";
                 comboBoxGuitarTypes.SelectedValuePath = "Id";
                 comboBoxGuitarTypes.Items.Add(guitar);
             }
         }
 
-        private void HideTechnicalInformation()
+        private void HideColumnsWhichContainTechnicalInformation()
         {
             dataGridInventory.Columns[0 /* ID */].Visibility = Visibility.Hidden;
             dataGridInventory.Columns[1 /* Type ID */].Visibility = Visibility.Hidden;
@@ -53,16 +52,15 @@ namespace GuitarStoreWPF
             try
             {
                 dataGridInventory.ItemsSource = null;
-                Guitar guitar = (Guitar) comboBoxGuitarTypes.SelectedItem;
-                Guid guitarType = new Guid(guitar.Id.ToString());
-                
-                NHibernateInventory nhi = new NHibernateInventory();
-                List<Inventory> list = (List<Inventory>) nhi.ExecuteICriteria(guitarType);
+                var guitar = (Guitar) comboBoxGuitarTypes.SelectedItem;
+                var guitarType = new Guid(guitar.Id.ToString());
+
+                var nhi = new NHibernateInventory();
+                var list = (List<Inventory>) nhi.ExecuteICriteria(guitarType);
                 dataGridInventory.ItemsSource = list;
+                
                 if (list != null)
-                {
-                    HideTechnicalInformation();
-                }
+                    HideColumnsWhichContainTechnicalInformation();
             }
             catch (Exception ex)
             {
