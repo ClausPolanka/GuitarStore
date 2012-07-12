@@ -26,5 +26,25 @@ namespace NHibernate.GuitarStore.DataAccess
                 }
             }
         }
+
+        public IList<Inventory> ExecuteICriteria(Guid Id)
+        {
+            using (ITransaction transaction = Session.BeginTransaction())
+            {
+                try
+                {
+                    IList<Inventory> result = Session.CreateCriteria(typeof (Inventory))
+                        .Add(Restrictions.Eq("TypeId",Id))
+                        .List<Inventory>();
+                    transaction.Commit();
+                    return result;
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw;
+                }
+            }
+        }
     }
 }

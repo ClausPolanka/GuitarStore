@@ -10,9 +10,9 @@ namespace NHibernate.GuitarStore.DataAccess
 {
     public class NHibernateBase
     {
-        private static Configuration Configuration { get; set; }
         protected static ISessionFactory SessionFactory { get; set; }
-        
+        private static Configuration Configuration { get; set; }
+
         private static ISession session;
         private static IStatelessSession statelessSession;
 

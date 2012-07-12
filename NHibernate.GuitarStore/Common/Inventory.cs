@@ -16,5 +16,6 @@ namespace NHibernate.GuitarStore.Common
         public virtual decimal? Cost { get; set; }
         public virtual decimal? Price { get; set; }
         public virtual DateTime? Received { get; set; }
+        public virtual DateTime? Version { get; set; }
     }
 }

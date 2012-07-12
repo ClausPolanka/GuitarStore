@@ -3,7 +3,12 @@
         WindowStartupLocation="CenterScreen" BorderBrush="Black" Background="Black" ResizeMode="NoResize"
         Loaded="Window_Loaded">
   <Grid>
-    <DataGrid Name="dataGridInventory" AutoGenerateColumns="True" HorizontalAlignment="Stretch"
-              Margin="12,59,110,52" VerticalAlignment="Stretch" />
+    <ComboBox Height="25" SelectionChanged="comboBoxGuitarTypes_SelectionChanged" HorizontalAlignment="Left"
+              Margin="12,28,0,0" Name="comboBoxGuitarTypes" VerticalAlignment="Top" Width="195" />
+    <DataGrid Name="dataGridInventory" AutoGenerateColumns="True" HorizontalAlignment="Stretch" Margin="12,59,110,52"
+              VerticalAlignment="Stretch" />
+    <Label Content="Label" Height="28" HorizontalAlignment="Left" Margin="12,321,0,0" Name="labelMessage"
+           VerticalAlignment="Top" Width="481" />
   </Grid>
+
 </Window>
