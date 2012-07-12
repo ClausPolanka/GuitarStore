@@ -1,5 +1,4 @@
 using System;
-using NHibernate.Mapping.ByCode.Conformist;
 
 namespace NHibernate.GuitarStore.Common
 {
@@ -19,18 +18,3 @@ namespace NHibernate.GuitarStore.Common
         public virtual DateTime? Received { get; set; }
     }
 }
-
-//    public class InventoryMap : ClassMapping<Inventory>
-//    {
-//        public InventoryMap()
-//        {
-//            Id<Guid>(x => x.Id, map => { map.Column("ID"); });
-//            Property<Guid>(x => x.TypeId, map => map.Column("TYPEID"));
-//            Property<string>(x => x.Builder, map => map.Column("BUILDER"));
-//            Property<string>(x => x.Model, map => map.Column("MODEL"));
-//            Property<int?>(x => x.QOH, map => map.Column("QOH"));
-//            Property<decimal?>(x => x.Cost, map => map.Column("COST"));
-//            Property<decimal?>(x => x.Price, map => map.Column("PRICE"));
-//            Property<DateTime?>(x => x.Received, map => map.Column("RECEIVED"));
-//        }
-//    }

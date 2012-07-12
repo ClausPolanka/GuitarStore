@@ -19,7 +19,7 @@ namespace GuitarStoreWPF
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            NHibernateInventory nhi         = new NHibernateInventory();
+            NHibernateInventory nhi = new NHibernateInventory();
             IList<Inventory> list = nhi.ExecuteICriteriaOrderBy("Builder");
             dataGridInventory.ItemsSource = list;
             if (list != null)

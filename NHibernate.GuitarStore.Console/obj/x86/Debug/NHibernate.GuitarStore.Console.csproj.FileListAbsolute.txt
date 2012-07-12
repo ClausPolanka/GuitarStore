@@ -1,0 +1,14 @@
+C:\Dev\Src\Workspaces\VS\GuitarStore\NHibernate.GuitarStore.Console\bin\Debug\NHibernate.GuitarStore.Console.exe.config
+C:\Dev\Src\Workspaces\VS\GuitarStore\NHibernate.GuitarStore.Console\bin\Debug\NHibernate.GuitarStore.Console.exe
+C:\Dev\Src\Workspaces\VS\GuitarStore\NHibernate.GuitarStore.Console\bin\Debug\NHibernate.GuitarStore.Console.pdb
+C:\Dev\Src\Workspaces\VS\GuitarStore\NHibernate.GuitarStore.Console\bin\Debug\Iesi.Collections.dll
+C:\Dev\Src\Workspaces\VS\GuitarStore\NHibernate.GuitarStore.Console\bin\Debug\NHibernate.dll
+C:\Dev\Src\Workspaces\VS\GuitarStore\NHibernate.GuitarStore.Console\bin\Debug\NHibernate.GuitarStore.dll
+C:\Dev\Src\Workspaces\VS\GuitarStore\NHibernate.GuitarStore.Console\bin\Debug\NHibernate.GuitarStore.pdb
+C:\Dev\Src\Workspaces\VS\GuitarStore\NHibernate.GuitarStore.Console\bin\Debug\Iesi.Collections.pdb
+C:\Dev\Src\Workspaces\VS\GuitarStore\NHibernate.GuitarStore.Console\bin\Debug\Iesi.Collections.xml
+C:\Dev\Src\Workspaces\VS\GuitarStore\NHibernate.GuitarStore.Console\bin\Debug\NHibernate.pdb
+C:\Dev\Src\Workspaces\VS\GuitarStore\NHibernate.GuitarStore.Console\bin\Debug\NHibernate.xml
+C:\Dev\Src\Workspaces\VS\GuitarStore\NHibernate.GuitarStore.Console\obj\x86\Debug\NHibernate.GuitarStore.Console.csprojResolveAssemblyReference.cache
+C:\Dev\Src\Workspaces\VS\GuitarStore\NHibernate.GuitarStore.Console\obj\x86\Debug\NHibernate.GuitarStore.Console.exe
+C:\Dev\Src\Workspaces\VS\GuitarStore\NHibernate.GuitarStore.Console\obj\x86\Debug\NHibernate.GuitarStore.Console.pdb

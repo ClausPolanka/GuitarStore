@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using NHibernate.GuitarStore.Common;
-using NHibernate.GuitarStore.DataAccess;    
+using NHibernate.GuitarStore.DataAccess;
 using NHibernate.Linq;
 
 namespace NHibernate.GuitarStore.Console

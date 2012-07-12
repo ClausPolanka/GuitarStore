@@ -7,6 +7,6 @@ namespace NHibernate.GuitarStore.Common
     {
         public virtual Guid Id { get; set; }
         public virtual string Type { get; set; }
-        IList<Inventory> Inventory { get; set; }
+        private IList<Inventory> Inventory { get; set; }
     }
 }
