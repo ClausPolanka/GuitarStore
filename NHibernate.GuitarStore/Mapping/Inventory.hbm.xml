@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NHibernate.GuitarStore">
+  <class name="NHibernate.GuitarStore.Common.Inventory, NHibernate.GuitarStore" table="INVENTORY">
+    <id name="Id" column="ID" type="System.Guid" />
+    <property name="TypeId" column="TYPEID" type="System.Guid" />
+    <property name="Builder" column="BUILDER" type="System.String" />
+    <property name="Model" column="MODEL" type="System.String" />
+    <property name="QOH" column="QOH" type="System.Int32" />
+    <property name="Cost" column="COST" type="System.Decimal" />
+    <property name="Price" column="PRICE" type="System.Decimal" />
+    <property name="Received" column="RECEIVED" type="System.DateTime" />
+  </class>
+</hibernate-mapping>

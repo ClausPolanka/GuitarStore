@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NHibernate.GuitarStore">
+  <class name="NHibernate.GuitarStore.Common.Guitar, NHibernate.GuitarStore" table="GUITAR">
+    <id name="Id" column="ID" type="System.Guid" />
+    <property name="Type" column="TYPE" type="System.String" />
+    <bag name="Inventory" table="INVENTORY" lazy="true">
+      <key column="TYPEID" />
+      <one-to-many class="NHibernate.GuitarStore.Common.Inventory" />
+    </bag>
+  </class>
+</hibernate-mapping>
