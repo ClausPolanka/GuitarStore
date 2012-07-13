@@ -8,6 +8,7 @@ using NHibernate.Driver;
 using NHibernate.Event;
 using NHibernate.SqlCommand;
 using log4net;
+using log4net.Config;
 
 namespace NHibernate.GuitarStore.DataAccess
 {
@@ -15,6 +16,13 @@ namespace NHibernate.GuitarStore.DataAccess
     {
         private static ISession session;
         private static IStatelessSession statelessSession;
+
+        public NHibernateBase()
+        {
+            XmlConfigurator.Configure();
+            ConsoleManager.Show();
+        }
+
         protected static ISessionFactory SessionFactory { get; set; }
         private static Configuration Configuration { get; set; }
 
@@ -36,12 +44,6 @@ namespace NHibernate.GuitarStore.DataAccess
                     statelessSession = SessionFactory.OpenStatelessSession();
                 return statelessSession;
             }
-        }
-
-        public NHibernateBase()
-        {
-            log4net.Config.XmlConfigurator.Configure();
-            ConsoleManager.Show();
         }
 
         public void Initialize(string assembly)
@@ -101,9 +103,13 @@ namespace NHibernate.GuitarStore.DataAccess
     {
         private static readonly ILog log = LogManager.GetLogger("NHBase.SQL.Delete");
 
+        #region IPostDeleteEventListener Members
+
         public void OnPostDelete(PostDeleteEvent @event)
         {
-            log.Info(@event.Id.ToString() + "has been deleted.");
+            log.Info(@event.Id + "has been deleted.");
         }
+
+        #endregion
     }
 }

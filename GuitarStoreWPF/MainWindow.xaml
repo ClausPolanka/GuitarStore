@@ -13,8 +13,9 @@
             VerticalAlignment="Top" Width="76" Click="buttonViewSQL_Click" />
     <Image Name="ImageDatabaseCounter" Height="58" HorizontalAlignment="Left" Margin="529,154,0,0" Stretch="Fill"
            VerticalAlignment="Top" Width="54" Source="/GuitarStoreWPF;component/Images/green.jpg" />
-        <Button Content="Delete" Height="21" HorizontalAlignment="Left" Margin="527,96,0,0" Name="button2" VerticalAlignment="Top" Width="76" Click="buttonDelete_Click" />
-    </Grid>
+    <Button Content="Delete" Height="21" HorizontalAlignment="Left" Margin="527,96,0,0" Name="button2"
+            VerticalAlignment="Top" Width="76" Click="buttonDelete_Click" />
+  </Grid>
   <Window.Resources>
     <ResourceDictionary>
       <ImageSource x:Key="ImageDatabaseCounterGreen">

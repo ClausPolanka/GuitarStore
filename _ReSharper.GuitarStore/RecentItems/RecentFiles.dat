@@ -3,22 +3,46 @@
     <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:Mapping/f:Guitar.hbm.xml" caret="0" fromTop="0" />
     <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:Common/f:Guitar.cs" caret="424" fromTop="19" />
     <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:Mapping/f:Inventory.hbm.xml" caret="793" fromTop="12" />
-    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:App.config" caret="1018" fromTop="8" />
-    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateInventory.cs" caret="940" fromTop="14" />
     <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:Common/f:Inventory.cs" caret="525" fromTop="18" />
-    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateBase.cs" caret="1398" fromTop="14" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:ConsoleManager.cs" caret="350" fromTop="7" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:Utils.cs" caret="264" fromTop="9" />
+    <File id="65E5F993-C079-4F79-9295-A7501D0E3313/f:FrameworkElement.cs" caret="9446" fromTop="11" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml" caret="1591" fromTop="9" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateInventory.cs" caret="1599" fromTop="4" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="5065" fromTop="11" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:App.config" caret="2151" fromTop="17" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateBase.cs" caret="677" fromTop="18" />
   </RecentFiles>
   <RecentEdits>
-    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateBase.cs" caret="2020" fromTop="2" />
-    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:Common/f:Inventory.cs" caret="525" fromTop="18" />
-    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:Common/f:Guitar.cs" caret="291" fromTop="10" />
-    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateInventory.cs" caret="906" fromTop="14" />
-    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateInventory.cs" caret="1575" fromTop="32" />
-    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateInventory.cs" caret="1284" fromTop="16" />
-    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:Common/f:Guitar.cs" caret="173" fromTop="9" />
-    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateBase.cs" caret="1144" fromTop="16" />
-    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateBase.cs" caret="210" fromTop="8" />
-    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:App.config" caret="267" fromTop="5" />
-    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:App.config" caret="1604" fromTop="24" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml" caret="1882" fromTop="0" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml" caret="1871" fromTop="14" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="5069" fromTop="22" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="5069" fromTop="22" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="5065" fromTop="16" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="5065" fromTop="18" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="5065" fromTop="14" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="5065" fromTop="16" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateInventory.cs" caret="1579" fromTop="22" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateInventory.cs" caret="2299" fromTop="22" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateInventory.cs" caret="1790" fromTop="9" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml" caret="1591" fromTop="9" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="5065" fromTop="12" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="5065" fromTop="17" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="5069" fromTop="20" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="1050" fromTop="0" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="1909" fromTop="0" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="4448" fromTop="0" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="5065" fromTop="11" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="4423" fromTop="0" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="3429" fromTop="0" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="4686" fromTop="10" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:MainWindow.xaml.cs" caret="592" fromTop="21" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:App.config" caret="1830" fromTop="21" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:App.config" caret="1527" fromTop="14" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:App.config" caret="1922" fromTop="15" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateBase.cs" caret="3279" fromTop="15" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateBase.cs" caret="1253" fromTop="14" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:App.config" caret="2151" fromTop="17" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateBase.cs" caret="3081" fromTop="5" />
   </RecentEdits>
 </RecentFiles>

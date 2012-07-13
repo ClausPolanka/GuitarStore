@@ -114,10 +114,10 @@ namespace GuitarStoreWPF
 
         private void buttonDelete_Click(object sender, RoutedEventArgs e)
         {
-            Inventory inventoryItem = (Inventory) dataGridInventory.SelectedItem;
-            Guid item = new Guid(inventoryItem.Id.ToString());
-            
-            NHibernateInventory nhi = new NHibernateInventory();
+            var inventoryItem = (Inventory) dataGridInventory.SelectedItem;
+            var item = new Guid(inventoryItem.Id.ToString());
+
+            var nhi = new NHibernateInventory();
             if (nhi.DeleteInventoryItem(item))
             {
                 dataGridInventory.ItemsSource = null;
