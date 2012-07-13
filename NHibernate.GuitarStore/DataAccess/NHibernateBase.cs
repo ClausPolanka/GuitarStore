@@ -5,7 +5,9 @@ using NHibernate.Cfg;
 using NHibernate.Connection;
 using NHibernate.Dialect;
 using NHibernate.Driver;
+using NHibernate.Event;
 using NHibernate.SqlCommand;
+using log4net;
 
 namespace NHibernate.GuitarStore.DataAccess
 {
@@ -62,6 +64,7 @@ namespace NHibernate.GuitarStore.DataAccess
             });
             Configuration.AddAssembly(assembly);
             Configuration.SetInterceptor(new SQLInterceptor());
+            Configuration.EventListeners.PostDeleteEventListeners = new IPostDeleteEventListener[] {new AuditDeleteEvent()};
             return Configuration;
         }
 
@@ -90,10 +93,17 @@ namespace NHibernate.GuitarStore.DataAccess
         {
             Utils.NHibernateGeneratedSQL = sql.ToString();
             Utils.QueryCounter++;
-            Console.WriteLine("=================");
-            Console.WriteLine(Utils.FormatSQL());
-            Console.WriteLine("=================");
             return sql;
+        }
+    }
+
+    public class AuditDeleteEvent : IPostDeleteEventListener
+    {
+        private static readonly ILog log = LogManager.GetLogger("NHBase.SQL.Delete");
+
+        public void OnPostDelete(PostDeleteEvent @event)
+        {
+            log.Info(@event.Id.ToString() + "has been deleted.");
         }
     }
 }

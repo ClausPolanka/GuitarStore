@@ -9,6 +9,20 @@
               VerticalAlignment="Stretch" />
     <Label Content="Label" Height="28" HorizontalAlignment="Left" Margin="12,321,0,0" Name="labelMessage"
            VerticalAlignment="Top" Width="481" />
-  </Grid>
-
+    <Button Content="View SQL" Height="21" HorizontalAlignment="Left" Margin="527,59,0,0" Name="button1"
+            VerticalAlignment="Top" Width="76" Click="buttonViewSQL_Click" />
+    <Image Name="ImageDatabaseCounter" Height="58" HorizontalAlignment="Left" Margin="529,154,0,0" Stretch="Fill"
+           VerticalAlignment="Top" Width="54" Source="/GuitarStoreWPF;component/Images/green.jpg" />
+        <Button Content="Delete" Height="21" HorizontalAlignment="Left" Margin="527,96,0,0" Name="button2" VerticalAlignment="Top" Width="76" Click="buttonDelete_Click" />
+    </Grid>
+  <Window.Resources>
+    <ResourceDictionary>
+      <ImageSource x:Key="ImageDatabaseCounterGreen">
+        Images/green.jpg</ImageSource>
+      <ImageSource x:Key="ImageDatabaseCounterYellow">
+        Images/yellow.jpg</ImageSource>
+      <ImageSource x:Key="ImageDatabaseCounterRed">
+        Images/red.jpg</ImageSource>
+    </ResourceDictionary>
+  </Window.Resources>
 </Window>
