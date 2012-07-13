@@ -1,43 +1,1428 @@
-2012.07.12 10:49:27 INFO  [10] - NHibernate 3.3.1.4000 (3.3.1.4000)
-2012.07.12 10:49:27 INFO  [10] - Bytecode provider name : lcg
-2012.07.12 10:49:27 INFO  [10] - Using reflection optimizer
-2012.07.12 10:49:27 INFO  [10] - Searching for mapped documents in assembly: NHibernate.GuitarStore
-2012.07.12 10:49:27 INFO  [10] - Mapping resource: NHibernate.GuitarStore.Mapping.Guitar.hbm.xml
-2012.07.12 10:49:27 INFO  [10] - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-2012.07.12 10:49:28 INFO  [10] - Mapping class: NHibernate.GuitarStore.Common.Guitar -> GUITAR
-2012.07.12 10:49:28 INFO  [10] - Mapping resource: NHibernate.GuitarStore.Mapping.Inventory.hbm.xml
-2012.07.12 10:49:28 INFO  [10] - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-2012.07.12 10:49:28 INFO  [10] - Mapping class: NHibernate.GuitarStore.Common.Inventory -> INVENTORY
-2012.07.12 10:49:28 INFO  [10] - checking mappings queue
-2012.07.12 10:49:28 INFO  [10] - processing one-to-many association mappings
-2012.07.12 10:49:28 INFO  [10] - mapping collection: NHibernate.GuitarStore.Common.Guitar.Inventory -> INVENTORY
-2012.07.12 10:49:28 INFO  [10] - processing one-to-one association property references
-2012.07.12 10:49:28 INFO  [10] - processing foreign key constraints
-2012.07.12 10:49:28 INFO  [10] - processing filters (second pass)
-2012.07.12 10:49:28 INFO  [10] - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-2012.07.12 10:49:28 INFO  [10] - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-2012.07.12 10:49:28 INFO  [10] - Using dialect defined converter
-2012.07.12 10:49:28 INFO  [10] - Generate SQL with comments: disabled
-2012.07.12 10:49:28 INFO  [10] - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-2012.07.12 10:49:28 INFO  [10] - Configuring ConnectionProvider
-2012.07.12 10:49:28 INFO  [10] - setting ADO.NET command timeout to 15 seconds
-2012.07.12 10:49:28 INFO  [10] - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
-2012.07.12 10:49:28 INFO  [10] - Optimize cache for minimal puts: False
-2012.07.12 10:49:28 INFO  [10] - Connection release mode: auto
-2012.07.12 10:49:28 INFO  [10] - Default batch fetch size: 1
-2012.07.12 10:49:28 INFO  [10] - echoing all SQL to stdout
-2012.07.12 10:49:28 INFO  [10] - Statistics: disabled
-2012.07.12 10:49:28 INFO  [10] - Deleted entity synthetic identifier rollback: disabled
-2012.07.12 10:49:28 INFO  [10] - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
-2012.07.12 10:49:28 INFO  [10] - Query language substitutions: {'true'='1', 'false'='0', 'yes'=''Y'', 'no'=''N''}
-2012.07.12 10:49:28 INFO  [10] - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-2012.07.12 10:49:28 INFO  [10] - Order SQL inserts for batching: enabled
-2012.07.12 10:49:28 INFO  [10] - Batcher factory: NHibernate.AdoNet.SqlClientBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-2012.07.12 10:49:28 INFO  [10] - Using Isolation Level: ReadCommitted
-2012.07.12 10:49:28 INFO  [10] - Default entity-mode: Poco
-2012.07.12 10:49:28 INFO  [10] - Named query checking : enabled
-2012.07.12 10:49:28 INFO  [10] - building session factory
-2012.07.12 10:49:28 INFO  [10] - no name configured
-2012.07.12 10:49:28 INFO  [10] - SELECT this_.ID as ID0_0_, this_.TYPE as TYPE0_0_ FROM GUITAR this_
-2012.07.12 10:49:28 INFO  [10] - SELECT this_.ID as ID1_0_, this_.TYPEID as TYPEID1_0_, this_.BUILDER as BUILDER1_0_, this_.MODEL as MODEL1_0_, this_.QOH as QOH1_0_, this_.COST as COST1_0_, this_.PRICE as PRICE1_0_, this_.RECEIVED as RECEIVED1_0_ FROM INVENTORY this_ ORDER BY this_.BUILDER asc
-2012.07.12 10:49:32 INFO  [10] - SELECT this_.ID as ID1_0_, this_.TYPEID as TYPEID1_0_, this_.BUILDER as BUILDER1_0_, this_.MODEL as MODEL1_0_, this_.QOH as QOH1_0_, this_.COST as COST1_0_, this_.PRICE as PRICE1_0_, this_.RECEIVED as RECEIVED1_0_ FROM INVENTORY this_ WHERE this_.TYPEID = @p0
+2012.07.13 12:08:49 DEBUG [1] - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity NHibernate.GuitarStore.Common.Inventory: SELECT inventory0_.ID as ID1_0_, inventory0_.TYPEID as TYPEID1_0_, inventory0_.BUILDER as BUILDER1_0_, inventory0_.MODEL as MODEL1_0_, inventory0_.QOH as QOH1_0_, inventory0_.COST as COST1_0_, inventory0_.PRICE as PRICE1_0_, inventory0_.RECEIVED as RECEIVED1_0_ FROM INVENTORY inventory0_ WHERE inventory0_.ID=?
+2012.07.13 12:08:49 DEBUG [1] - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity NHibernate.GuitarStore.Common.Inventory: SELECT inventory0_.ID as ID1_0_, inventory0_.TYPEID as TYPEID1_0_, inventory0_.BUILDER as BUILDER1_0_, inventory0_.MODEL as MODEL1_0_, inventory0_.QOH as QOH1_0_, inventory0_.COST as COST1_0_, inventory0_.PRICE as PRICE1_0_, inventory0_.RECEIVED as RECEIVED1_0_ FROM INVENTORY inventory0_ WHERE inventory0_.ID=?
+2012.07.13 12:08:49 DEBUG [1] - Static select for one-to-many NHibernate.GuitarStore.Common.Guitar.Inventory: SELECT inventory0_.TYPEID as TYPEID1_, inventory0_.ID as ID1_, inventory0_.ID as ID1_0_, inventory0_.TYPEID as TYPEID1_0_, inventory0_.BUILDER as BUILDER1_0_, inventory0_.MODEL as MODEL1_0_, inventory0_.QOH as QOH1_0_, inventory0_.COST as COST1_0_, inventory0_.PRICE as PRICE1_0_, inventory0_.RECEIVED as RECEIVED1_0_ FROM INVENTORY inventory0_ WHERE inventory0_.TYPEID=?
+2012.07.13 12:08:49 DEBUG [1] - initializing class SessionFactoryObjectFactory
+2012.07.13 12:08:49 DEBUG [1] - registered: 5aa358eeba864cbeaf29a240df72699e(unnamed)
+2012.07.13 12:08:49 INFO  [1] - no name configured
+2012.07.13 12:08:49 DEBUG [1] - Instantiated session factory
+2012.07.13 12:08:49 DEBUG [1] - Checking 0 named HQL queries
+2012.07.13 12:08:49 DEBUG [1] - Checking 0 named SQL queries
+2012.07.13 12:08:49 DEBUG [1] - [session-id=a95ee432-6dc4-481c-88d6-d9d652352545] opened session at timestamp: 634777781292, for session factory: [/5aa358eeba864cbeaf29a240df72699e]
+2012.07.13 12:08:49 DEBUG [1] - Begin (ReadCommitted)
+2012.07.13 12:08:49 DEBUG [1] - Obtaining IDbConnection from Driver
+2012.07.13 12:08:49 DEBUG [1] - put criteria= alias=this0_
+2012.07.13 12:08:49 DEBUG [1] - Opened new IDbCommand, open IDbCommands: 1
+2012.07.13 12:08:49 DEBUG [1] - Building an IDbCommand object for the SqlString: SELECT this_.ID as ID0_0_, this_.TYPE as TYPE0_0_ FROM GUITAR this_
+2012.07.13 12:08:49 INFO  [1] - SELECT this_.ID as ID0_0_, this_.TYPE as TYPE0_0_ FROM GUITAR this_
+2012.07.13 12:08:49 DEBUG [1] - SELECT this_.ID as ID0_0_, this_.TYPE as TYPE0_0_ FROM GUITAR this_
+2012.07.13 12:08:49 DEBUG [1] - Enlist Command
+2012.07.13 12:08:49 DEBUG [1] - ExecuteReader took 0 ms
+2012.07.13 12:08:49 DEBUG [1] - Opened IDataReader, open IDataReaders: 1
+2012.07.13 12:08:49 DEBUG [1] - processing result set
+2012.07.13 12:08:49 DEBUG [1] - result set row: 0
+2012.07.13 12:08:49 DEBUG [1] - returning 'aad1e80c-3b84-11e1-9d69-04064824019b' as column: ID0_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#aad1e80c-3b84-11e1-9d69-04064824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#aad1e80c-3b84-11e1-9d69-04064824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#aad1e80c-3b84-11e1-9d69-04064824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'BASS' as column: TYPE0_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 1
+2012.07.13 12:08:49 DEBUG [1] - returning 'b4c1cc10-3b84-11e1-9049-08064824019b' as column: ID0_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#b4c1cc10-3b84-11e1-9049-08064824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#b4c1cc10-3b84-11e1-9049-08064824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#b4c1cc10-3b84-11e1-9049-08064824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'RESONATOR' as column: TYPE0_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 2
+2012.07.13 12:08:49 DEBUG [1] - returning 'c16f4faa-3b84-11e1-8beb-39064824019b' as column: ID0_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#c16f4faa-3b84-11e1-8beb-39064824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#c16f4faa-3b84-11e1-8beb-39064824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#c16f4faa-3b84-11e1-8beb-39064824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'CLASSICAL' as column: TYPE0_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 3
+2012.07.13 12:08:49 DEBUG [1] - returning 'ca18634e-3b84-11e1-b39b-3a064824019b' as column: ID0_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#ca18634e-3b84-11e1-b39b-3a064824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#ca18634e-3b84-11e1-b39b-3a064824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#ca18634e-3b84-11e1-b39b-3a064824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning '7-STRING' as column: TYPE0_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 4
+2012.07.13 12:08:49 DEBUG [1] - returning 'd3263308-3b84-11e1-ab10-3e064824019b' as column: ID0_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#d3263308-3b84-11e1-ab10-3e064824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#d3263308-3b84-11e1-ab10-3e064824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#d3263308-3b84-11e1-ab10-3e064824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'LEFT-HANDED' as column: TYPE0_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 5
+2012.07.13 12:08:49 DEBUG [1] - returning '676ea654-3b84-11e1-8625-71054824019b' as column: ID0_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#676ea654-3b84-11e1-8625-71054824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#676ea654-3b84-11e1-8625-71054824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#676ea654-3b84-11e1-8625-71054824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'STELL' as column: TYPE0_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 6
+2012.07.13 12:08:49 DEBUG [1] - returning '7d9f1d1e-3b84-11e1-8ed6-85054824019b' as column: ID0_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#7d9f1d1e-3b84-11e1-8ed6-85054824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#7d9f1d1e-3b84-11e1-8ed6-85054824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#7d9f1d1e-3b84-11e1-8ed6-85054824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning '12-STRING' as column: TYPE0_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 7
+2012.07.13 12:08:49 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: ID0_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#87ab8ebe-3b84-11e1-8f53-86054824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#87ab8ebe-3b84-11e1-8f53-86054824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#87ab8ebe-3b84-11e1-8f53-86054824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'ELECTRIC' as column: TYPE0_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 8
+2012.07.13 12:08:49 DEBUG [1] - returning '93acb710-3b84-11e1-bc0f-8a054824019b' as column: ID0_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#93acb710-3b84-11e1-bc0f-8a054824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#93acb710-3b84-11e1-bc0f-8a054824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#93acb710-3b84-11e1-bc0f-8a054824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'ACOUSTIC' as column: TYPE0_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 9
+2012.07.13 12:08:49 DEBUG [1] - returning 'a0d86ec0-3b84-11e1-a1ef-fe054824019b' as column: ID0_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#a0d86ec0-3b84-11e1-a1ef-fe054824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#a0d86ec0-3b84-11e1-a1ef-fe054824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#a0d86ec0-3b84-11e1-a1ef-fe054824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'DOUBLE-NECK' as column: TYPE0_0_
+2012.07.13 12:08:49 DEBUG [1] - done processing result set (10 rows)
+2012.07.13 12:08:49 DEBUG [1] - running NHybridDataReader.Dispose()
+2012.07.13 12:08:49 DEBUG [1] - Closed IDataReader, open IDataReaders :0
+2012.07.13 12:08:49 DEBUG [1] - DataReader was closed after 18 ms
+2012.07.13 12:08:49 DEBUG [1] - Closed IDbCommand, open IDbCommands: 0
+2012.07.13 12:08:49 DEBUG [1] - total objects hydrated: 10
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#aad1e80c-3b84-11e1-9d69-04064824019b]
+2012.07.13 12:08:49 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#aad1e80c-3b84-11e1-9d69-04064824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#b4c1cc10-3b84-11e1-9049-08064824019b]
+2012.07.13 12:08:49 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#b4c1cc10-3b84-11e1-9049-08064824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#c16f4faa-3b84-11e1-8beb-39064824019b]
+2012.07.13 12:08:49 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#c16f4faa-3b84-11e1-8beb-39064824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#ca18634e-3b84-11e1-b39b-3a064824019b]
+2012.07.13 12:08:49 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#ca18634e-3b84-11e1-b39b-3a064824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#d3263308-3b84-11e1-ab10-3e064824019b]
+2012.07.13 12:08:49 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#d3263308-3b84-11e1-ab10-3e064824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#676ea654-3b84-11e1-8625-71054824019b]
+2012.07.13 12:08:49 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#676ea654-3b84-11e1-8625-71054824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#7d9f1d1e-3b84-11e1-8ed6-85054824019b]
+2012.07.13 12:08:49 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#7d9f1d1e-3b84-11e1-8ed6-85054824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#87ab8ebe-3b84-11e1-8f53-86054824019b]
+2012.07.13 12:08:49 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#87ab8ebe-3b84-11e1-8f53-86054824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#93acb710-3b84-11e1-bc0f-8a054824019b]
+2012.07.13 12:08:49 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#93acb710-3b84-11e1-bc0f-8a054824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#a0d86ec0-3b84-11e1-a1ef-fe054824019b]
+2012.07.13 12:08:49 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#a0d86ec0-3b84-11e1-a1ef-fe054824019b]
+2012.07.13 12:08:49 DEBUG [1] - initializing non-lazy collections
+2012.07.13 12:08:49 DEBUG [1] - Start Commit
+2012.07.13 12:08:49 DEBUG [1] - flushing session
+2012.07.13 12:08:49 DEBUG [1] - processing flush-time cascades
+2012.07.13 12:08:49 DEBUG [1] - dirty checking collections
+2012.07.13 12:08:49 DEBUG [1] - Flushing entities and processing referenced collections
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Processing unreferenced collections
+2012.07.13 12:08:49 DEBUG [1] - Scheduling collection removes/(re)creates/updates
+2012.07.13 12:08:49 DEBUG [1] - Flushed: 0 insertions, 0 updates, 0 deletions to 10 objects
+2012.07.13 12:08:49 DEBUG [1] - Flushed: 0 (re)creations, 0 updates, 0 removals to 10 collections
+2012.07.13 12:08:49 DEBUG [1] - listing entities:
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='aad1e80c-3b84-11e1-9d69-04064824019b', 'Type'='BASS', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='b4c1cc10-3b84-11e1-9049-08064824019b', 'Type'='RESONATOR', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='c16f4faa-3b84-11e1-8beb-39064824019b', 'Type'='CLASSICAL', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='ca18634e-3b84-11e1-b39b-3a064824019b', 'Type'='7-STRING', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='d3263308-3b84-11e1-ab10-3e064824019b', 'Type'='LEFT-HANDED', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='676ea654-3b84-11e1-8625-71054824019b', 'Type'='STELL', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='7d9f1d1e-3b84-11e1-8ed6-85054824019b', 'Type'='12-STRING', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Type'='ELECTRIC', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='93acb710-3b84-11e1-bc0f-8a054824019b', 'Type'='ACOUSTIC', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='a0d86ec0-3b84-11e1-a1ef-fe054824019b', 'Type'='DOUBLE-NECK', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - executing flush
+2012.07.13 12:08:49 DEBUG [1] - registering flush begin
+2012.07.13 12:08:49 DEBUG [1] - registering flush end
+2012.07.13 12:08:49 DEBUG [1] - post flush
+2012.07.13 12:08:49 DEBUG [1] - before transaction completion
+2012.07.13 12:08:49 DEBUG [1] - IDbTransaction Committed
+2012.07.13 12:08:49 DEBUG [1] - transaction completion
+2012.07.13 12:08:49 DEBUG [1] - aggressively releasing database connection
+2012.07.13 12:08:49 DEBUG [1] - Closing connection
+2012.07.13 12:08:49 DEBUG [1] - IDbTransaction disposed.
+2012.07.13 12:08:49 DEBUG [1] - Begin (ReadCommitted)
+2012.07.13 12:08:49 DEBUG [1] - Obtaining IDbConnection from Driver
+2012.07.13 12:08:49 DEBUG [1] - put criteria=
+Builder asc alias=this0_
+2012.07.13 12:08:49 DEBUG [1] - returning alias=this_ for criteria=
+Builder asc
+2012.07.13 12:08:49 DEBUG [1] - flushing session
+2012.07.13 12:08:49 DEBUG [1] - processing flush-time cascades
+2012.07.13 12:08:49 DEBUG [1] - dirty checking collections
+2012.07.13 12:08:49 DEBUG [1] - Flushing entities and processing referenced collections
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Processing unreferenced collections
+2012.07.13 12:08:49 DEBUG [1] - Scheduling collection removes/(re)creates/updates
+2012.07.13 12:08:49 DEBUG [1] - Flushed: 0 insertions, 0 updates, 0 deletions to 10 objects
+2012.07.13 12:08:49 DEBUG [1] - Flushed: 0 (re)creations, 0 updates, 0 removals to 10 collections
+2012.07.13 12:08:49 DEBUG [1] - listing entities:
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='aad1e80c-3b84-11e1-9d69-04064824019b', 'Type'='BASS', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='b4c1cc10-3b84-11e1-9049-08064824019b', 'Type'='RESONATOR', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='c16f4faa-3b84-11e1-8beb-39064824019b', 'Type'='CLASSICAL', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='ca18634e-3b84-11e1-b39b-3a064824019b', 'Type'='7-STRING', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='d3263308-3b84-11e1-ab10-3e064824019b', 'Type'='LEFT-HANDED', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='676ea654-3b84-11e1-8625-71054824019b', 'Type'='STELL', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='7d9f1d1e-3b84-11e1-8ed6-85054824019b', 'Type'='12-STRING', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Type'='ELECTRIC', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='93acb710-3b84-11e1-bc0f-8a054824019b', 'Type'='ACOUSTIC', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='a0d86ec0-3b84-11e1-a1ef-fe054824019b', 'Type'='DOUBLE-NECK', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - Dont need to execute flush
+2012.07.13 12:08:49 DEBUG [1] - Opened new IDbCommand, open IDbCommands: 1
+2012.07.13 12:08:49 DEBUG [1] - Building an IDbCommand object for the SqlString: SELECT this_.ID as ID1_0_, this_.TYPEID as TYPEID1_0_, this_.BUILDER as BUILDER1_0_, this_.MODEL as MODEL1_0_, this_.QOH as QOH1_0_, this_.COST as COST1_0_, this_.PRICE as PRICE1_0_, this_.RECEIVED as RECEIVED1_0_ FROM INVENTORY this_ ORDER BY this_.BUILDER asc
+2012.07.13 12:08:49 INFO  [1] - SELECT this_.ID as ID1_0_, this_.TYPEID as TYPEID1_0_, this_.BUILDER as BUILDER1_0_, this_.MODEL as MODEL1_0_, this_.QOH as QOH1_0_, this_.COST as COST1_0_, this_.PRICE as PRICE1_0_, this_.RECEIVED as RECEIVED1_0_ FROM INVENTORY this_ ORDER BY this_.BUILDER asc
+2012.07.13 12:08:49 DEBUG [1] - SELECT this_.ID as ID1_0_, this_.TYPEID as TYPEID1_0_, this_.BUILDER as BUILDER1_0_, this_.MODEL as MODEL1_0_, this_.QOH as QOH1_0_, this_.COST as COST1_0_, this_.PRICE as PRICE1_0_, this_.RECEIVED as RECEIVED1_0_ FROM INVENTORY this_ ORDER BY this_.BUILDER asc
+2012.07.13 12:08:49 DEBUG [1] - Enlist Command
+2012.07.13 12:08:49 DEBUG [1] - ExecuteReader took 0 ms
+2012.07.13 12:08:49 DEBUG [1] - Opened IDataReader, open IDataReaders: 1
+2012.07.13 12:08:49 DEBUG [1] - processing result set
+2012.07.13 12:08:49 DEBUG [1] - result set row: 0
+2012.07.13 12:08:49 DEBUG [1] - returning '5adfb8b2-3b87-11e1-8535-25094824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#5adfb8b2-3b87-11e1-8535-25094824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#5adfb8b2-3b87-11e1-8535-25094824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#5adfb8b2-3b87-11e1-8535-25094824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'a0d86ec0-3b84-11e1-a1ef-fe054824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'AGILE' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'Valkyrie HC' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '390,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '589,95' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 1
+2012.07.13 12:08:49 DEBUG [1] - returning '179f06e0-3b85-11e1-98d4-71064824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#179f06e0-3b85-11e1-98d4-71064824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#179f06e0-3b85-11e1-98d4-71064824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#179f06e0-3b85-11e1-98d4-71064824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'DEAN' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'Mustaine VMNT' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2900,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '3499,49' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.02.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 2
+2012.07.13 12:08:49 DEBUG [1] - returning '36d1ab80-3b85-11e1-830b-8e064824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#36d1ab80-3b85-11e1-830b-8e064824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#36d1ab80-3b85-11e1-830b-8e064824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#36d1ab80-3b85-11e1-830b-8e064824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'DEAN' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'Dimebag Camo' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1274,85' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2973,30' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.04.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 3
+2012.07.13 12:08:49 DEBUG [1] - returning 'aa6e67ea-3b85-11e1-abdf-10074824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#aa6e67ea-3b85-11e1-abdf-10074824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#aa6e67ea-3b85-11e1-abdf-10074824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#aa6e67ea-3b85-11e1-abdf-10074824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'DEAN' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'Razorback' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '3' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1863,25' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '4197,60' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 4
+2012.07.13 12:08:49 DEBUG [1] - returning '213b8334-3b87-11e1-8d50-f3084824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#213b8334-3b87-11e1-8d50-f3084824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#213b8334-3b87-11e1-8d50-f3084824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#213b8334-3b87-11e1-8d50-f3084824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning '93acb710-3b84-11e1-bc0f-8a054824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'DEAN' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'Axcess Quilt' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1300,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1699,99' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.03.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 5
+2012.07.13 12:08:49 DEBUG [1] - returning 'ba90b680-3b87-11e1-9b77-f9094824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#ba90b680-3b87-11e1-9b77-f9094824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#ba90b680-3b87-11e1-9b77-f9094824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#ba90b680-3b87-11e1-9b77-f9094824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'aad1e80c-3b84-11e1-9d69-04064824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'DEAN' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'Motto 4' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1100,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1399,99' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.03.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 6
+2012.07.13 12:08:49 DEBUG [1] - returning 'd8cc9b56-3b86-11e1-8c9d-ba084824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#d8cc9b56-3b86-11e1-8c9d-ba084824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#d8cc9b56-3b86-11e1-8c9d-ba084824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#d8cc9b56-3b86-11e1-8c9d-ba084824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'b4c1cc10-3b84-11e1-9049-08064824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'FENDER' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'FR-50' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '300,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '499,99' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 7
+2012.07.13 12:08:49 DEBUG [1] - returning '39da7148-3b87-11e1-b0cf-00094824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#39da7148-3b87-11e1-b0cf-00094824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#39da7148-3b87-11e1-b0cf-00094824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#39da7148-3b87-11e1-b0cf-00094824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning '93acb710-3b84-11e1-bc0f-8a054824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'FENDER' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'Mandolin' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '170,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '299,99' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.02.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 8
+2012.07.13 12:08:49 DEBUG [1] - returning '91748922-3b85-11e1-890e-02074824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#91748922-3b85-11e1-890e-02074824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#91748922-3b85-11e1-890e-02074824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#91748922-3b85-11e1-890e-02074824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'FENDER' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'Jazzmaster' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '563,87' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1136,83' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 9
+2012.07.13 12:08:49 DEBUG [1] - returning 'c13f7d96-3b86-11e1-8458-81084824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#c13f7d96-3b86-11e1-8458-81084824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#c13f7d96-3b86-11e1-8458-81084824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#c13f7d96-3b86-11e1-8458-81084824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'b4c1cc10-3b84-11e1-9049-08064824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'FENDER' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'FR-50CE' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '650,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '999,99' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 10
+2012.07.13 12:08:49 DEBUG [1] - returning 'f7119cc8-3b87-11e1-9ba8-2e0a4824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#f7119cc8-3b87-11e1-9ba8-2e0a4824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#f7119cc8-3b87-11e1-9ba8-2e0a4824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#f7119cc8-3b87-11e1-9ba8-2e0a4824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'aad1e80c-3b84-11e1-9d69-04064824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'GIBSON' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'SG Standard' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '4' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2000,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2419,99' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.02.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 11
+2012.07.13 12:08:49 DEBUG [1] - returning 'c28bd0ec-3b85-11e1-9cf7-34074824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#c28bd0ec-3b85-11e1-9cf7-34074824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#c28bd0ec-3b85-11e1-9cf7-34074824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#c28bd0ec-3b85-11e1-9cf7-34074824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'GIBSON' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'Les Paul Custom' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '8' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1372,92' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '3847,80' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.01.1900 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 12
+2012.07.13 12:08:49 DEBUG [1] - returning 'f9c1e1f4-3b86-11e1-8503-d1084824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#f9c1e1f4-3b86-11e1-8503-d1084824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#f9c1e1f4-3b86-11e1-8503-d1084824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#f9c1e1f4-3b86-11e1-8503-d1084824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning '93acb710-3b84-11e1-bc0f-8a054824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'GIBSON' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'SJ-250 Monarch' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '20000,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '25771,99' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.02.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 13
+2012.07.13 12:08:49 DEBUG [1] - returning '83dea62a-3b86-11e1-ba6a-36084824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#83dea62a-3b86-11e1-ba6a-36084824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#83dea62a-3b86-11e1-ba6a-36084824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#83dea62a-3b86-11e1-ba6a-36084824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'c16f4faa-3b84-11e1-8beb-39064824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'IBANEZ' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'GA3' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '900,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1199,99' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 14
+2012.07.13 12:08:49 DEBUG [1] - returning '10ca2a4a-3b88-11e1-bdc9-380a4824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#10ca2a4a-3b88-11e1-bdc9-380a4824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#10ca2a4a-3b88-11e1-bdc9-380a4824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#10ca2a4a-3b88-11e1-bdc9-380a4824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'aad1e80c-3b84-11e1-9d69-04064824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'IBANEZ' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'GSRM20' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '800,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1299,99' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 15
+2012.07.13 12:08:49 DEBUG [1] - returning 'dedf9418-3b85-11e1-9732-50074824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#dedf9418-3b85-11e1-9732-50074824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#dedf9418-3b85-11e1-9732-50074824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#dedf9418-3b85-11e1-9732-50074824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'IBANEZ' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'S7420' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '882,59' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2168,75' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.02.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 16
+2012.07.13 12:08:49 DEBUG [1] - returning '4f80db82-3b86-11e1-a1fb-16084824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#4f80db82-3b86-11e1-a1fb-16084824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#4f80db82-3b86-11e1-a1fb-16084824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#4f80db82-3b86-11e1-a1fb-16084824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'c16f4faa-3b84-11e1-8beb-39064824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'IBANEZ' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'GA5' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1200,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1399,00' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.02.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 17
+2012.07.13 12:08:49 DEBUG [1] - returning 'fce1858e-3b85-11e1-8151-6d074824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#fce1858e-3b85-11e1-8151-6d074824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#fce1858e-3b85-11e1-8151-6d074824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#fce1858e-3b85-11e1-8151-6d074824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'IBANEZ' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'DN500K' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '441,29' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1224,29' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 18
+2012.07.13 12:08:49 DEBUG [1] - returning '53058592-3b85-11e1-b03c-aa064824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#53058592-3b85-11e1-b03c-aa064824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#53058592-3b85-11e1-b03c-aa064824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#53058592-3b85-11e1-b03c-aa064824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'IBANEZ' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'SA260FM' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1176,78' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2622,61' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 19
+2012.07.13 12:08:49 DEBUG [1] - returning '39f91810-3b86-11e1-aae8-fd074824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#39f91810-3b86-11e1-aae8-fd074824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#39f91810-3b86-11e1-aae8-fd074824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#39f91810-3b86-11e1-aae8-fd074824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'c16f4faa-3b84-11e1-8beb-39064824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'PAVAN' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'TP-10' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '8' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '350,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '499,00' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 20
+2012.07.13 12:08:49 DEBUG [1] - returning '6aca4cd4-3b86-11e1-a6e1-27084824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#6aca4cd4-3b86-11e1-a6e1-27084824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#6aca4cd4-3b86-11e1-a6e1-27084824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#6aca4cd4-3b86-11e1-a6e1-27084824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'c16f4faa-3b84-11e1-8beb-39064824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'TAKAMINE' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'C132S' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '11' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '450,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '899,49' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 21
+2012.07.13 12:08:49 DEBUG [1] - returning '7dd4cce0-3b87-11e1-bd64-a1094824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#7dd4cce0-3b87-11e1-bd64-a1094824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#7dd4cce0-3b87-11e1-bd64-a1094824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#7dd4cce0-3b87-11e1-bd64-a1094824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning '7d9f1d1e-3b84-11e1-8ed6-85054824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'TAYLOR' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '856ce' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '3200,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '4599,99' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.03.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 22
+2012.07.13 12:08:49 DEBUG [1] - returning '98081bc2-3b86-11e1-80b4-5e084824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#98081bc2-3b86-11e1-80b4-5e084824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#98081bc2-3b86-11e1-80b4-5e084824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#98081bc2-3b86-11e1-80b4-5e084824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'c16f4faa-3b84-11e1-8beb-39064824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'TAYLOR' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'NS74ce' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2000,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2399,99' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.01.1900 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 23
+2012.07.13 12:08:49 DEBUG [1] - returning '99883364-3b87-11e1-96eb-db094824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#99883364-3b87-11e1-96eb-db094824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#99883364-3b87-11e1-96eb-db094824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#99883364-3b87-11e1-96eb-db094824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning '7d9f1d1e-3b84-11e1-8ed6-85054824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'TAYLOR' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '455ce' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1300,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '2099,99' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - result set row: 24
+2012.07.13 12:08:49 DEBUG [1] - returning '228f3876-3b86-11e1-a42d-f1074824019b' as column: ID1_0_
+2012.07.13 12:08:49 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#228f3876-3b86-11e1-a42d-f1074824019b]
+2012.07.13 12:08:49 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#228f3876-3b86-11e1-a42d-f1074824019b]
+2012.07.13 12:08:49 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#228f3876-3b86-11e1-a42d-f1074824019b]
+2012.07.13 12:08:49 DEBUG [1] - returning 'c16f4faa-3b84-11e1-8beb-39064824019b' as column: TYPEID1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'TAYLOR' as column: BUILDER1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning 'NS24e' as column: MODEL1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '6' as column: QOH1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1000,00' as column: COST1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '1299,99' as column: PRICE1_0_
+2012.07.13 12:08:49 DEBUG [1] - returning '01.03.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:08:49 DEBUG [1] - done processing result set (25 rows)
+2012.07.13 12:08:49 DEBUG [1] - running NHybridDataReader.Dispose()
+2012.07.13 12:08:49 DEBUG [1] - Closed IDataReader, open IDataReaders :0
+2012.07.13 12:08:49 DEBUG [1] - DataReader was closed after 14 ms
+2012.07.13 12:08:49 DEBUG [1] - Closed IDbCommand, open IDbCommands: 0
+2012.07.13 12:08:49 DEBUG [1] - total objects hydrated: 25
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#5adfb8b2-3b87-11e1-8535-25094824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#5adfb8b2-3b87-11e1-8535-25094824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#179f06e0-3b85-11e1-98d4-71064824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#179f06e0-3b85-11e1-98d4-71064824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#36d1ab80-3b85-11e1-830b-8e064824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#36d1ab80-3b85-11e1-830b-8e064824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#aa6e67ea-3b85-11e1-abdf-10074824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#aa6e67ea-3b85-11e1-abdf-10074824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#213b8334-3b87-11e1-8d50-f3084824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#213b8334-3b87-11e1-8d50-f3084824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#ba90b680-3b87-11e1-9b77-f9094824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#ba90b680-3b87-11e1-9b77-f9094824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#d8cc9b56-3b86-11e1-8c9d-ba084824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#d8cc9b56-3b86-11e1-8c9d-ba084824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#39da7148-3b87-11e1-b0cf-00094824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#39da7148-3b87-11e1-b0cf-00094824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#91748922-3b85-11e1-890e-02074824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#91748922-3b85-11e1-890e-02074824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#c13f7d96-3b86-11e1-8458-81084824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#c13f7d96-3b86-11e1-8458-81084824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#f7119cc8-3b87-11e1-9ba8-2e0a4824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#f7119cc8-3b87-11e1-9ba8-2e0a4824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#c28bd0ec-3b85-11e1-9cf7-34074824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#c28bd0ec-3b85-11e1-9cf7-34074824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#f9c1e1f4-3b86-11e1-8503-d1084824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#f9c1e1f4-3b86-11e1-8503-d1084824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#83dea62a-3b86-11e1-ba6a-36084824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#83dea62a-3b86-11e1-ba6a-36084824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#10ca2a4a-3b88-11e1-bdc9-380a4824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#10ca2a4a-3b88-11e1-bdc9-380a4824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#dedf9418-3b85-11e1-9732-50074824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#dedf9418-3b85-11e1-9732-50074824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#4f80db82-3b86-11e1-a1fb-16084824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#4f80db82-3b86-11e1-a1fb-16084824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#fce1858e-3b85-11e1-8151-6d074824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#fce1858e-3b85-11e1-8151-6d074824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#53058592-3b85-11e1-b03c-aa064824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#53058592-3b85-11e1-b03c-aa064824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#39f91810-3b86-11e1-aae8-fd074824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#39f91810-3b86-11e1-aae8-fd074824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#6aca4cd4-3b86-11e1-a6e1-27084824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#6aca4cd4-3b86-11e1-a6e1-27084824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#7dd4cce0-3b87-11e1-bd64-a1094824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#7dd4cce0-3b87-11e1-bd64-a1094824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#98081bc2-3b86-11e1-80b4-5e084824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#98081bc2-3b86-11e1-80b4-5e084824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#99883364-3b87-11e1-96eb-db094824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#99883364-3b87-11e1-96eb-db094824019b]
+2012.07.13 12:08:49 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#228f3876-3b86-11e1-a42d-f1074824019b]
+2012.07.13 12:08:49 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#228f3876-3b86-11e1-a42d-f1074824019b]
+2012.07.13 12:08:49 DEBUG [1] - initializing non-lazy collections
+2012.07.13 12:08:49 DEBUG [1] - Start Commit
+2012.07.13 12:08:49 DEBUG [1] - flushing session
+2012.07.13 12:08:49 DEBUG [1] - processing flush-time cascades
+2012.07.13 12:08:49 DEBUG [1] - dirty checking collections
+2012.07.13 12:08:49 DEBUG [1] - Flushing entities and processing referenced collections
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b] (uninitialized)
+2012.07.13 12:08:49 DEBUG [1] - Processing unreferenced collections
+2012.07.13 12:08:49 DEBUG [1] - Scheduling collection removes/(re)creates/updates
+2012.07.13 12:08:49 DEBUG [1] - Flushed: 0 insertions, 0 updates, 0 deletions to 35 objects
+2012.07.13 12:08:49 DEBUG [1] - Flushed: 0 (re)creations, 0 updates, 0 removals to 10 collections
+2012.07.13 12:08:49 DEBUG [1] - listing entities:
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='aad1e80c-3b84-11e1-9d69-04064824019b', 'Type'='BASS', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='b4c1cc10-3b84-11e1-9049-08064824019b', 'Type'='RESONATOR', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='c16f4faa-3b84-11e1-8beb-39064824019b', 'Type'='CLASSICAL', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='ca18634e-3b84-11e1-b39b-3a064824019b', 'Type'='7-STRING', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='d3263308-3b84-11e1-ab10-3e064824019b', 'Type'='LEFT-HANDED', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='676ea654-3b84-11e1-8625-71054824019b', 'Type'='STELL', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='7d9f1d1e-3b84-11e1-8ed6-85054824019b', 'Type'='12-STRING', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Type'='ELECTRIC', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='93acb710-3b84-11e1-bc0f-8a054824019b', 'Type'='ACOUSTIC', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='a0d86ec0-3b84-11e1-a1ef-fe054824019b', 'Type'='DOUBLE-NECK', 'Inventory'='<uninitialized>'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='5adfb8b2-3b87-11e1-8535-25094824019b', 'TypeId'='a0d86ec0-3b84-11e1-a1ef-fe054824019b', 'Builder'='AGILE', 'Model'='Valkyrie HC', 'QOH'='1', 'Cost'='390,00', 'Price'='589,95', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='179f06e0-3b85-11e1-98d4-71064824019b', 'TypeId'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Builder'='DEAN', 'Model'='Mustaine VMNT', 'QOH'='1', 'Cost'='2900,00', 'Price'='3499,49', 'Received'='01.02.2012 00:00:00'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='36d1ab80-3b85-11e1-830b-8e064824019b', 'TypeId'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Builder'='DEAN', 'Model'='Dimebag Camo', 'QOH'='2', 'Cost'='1274,85', 'Price'='2973,30', 'Received'='01.04.2012 00:00:00'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='aa6e67ea-3b85-11e1-abdf-10074824019b', 'TypeId'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Builder'='DEAN', 'Model'='Razorback', 'QOH'='3', 'Cost'='1863,25', 'Price'='4197,60', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='213b8334-3b87-11e1-8d50-f3084824019b', 'TypeId'='93acb710-3b84-11e1-bc0f-8a054824019b', 'Builder'='DEAN', 'Model'='Axcess Quilt', 'QOH'='2', 'Cost'='1300,00', 'Price'='1699,99', 'Received'='01.03.2012 00:00:00'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='ba90b680-3b87-11e1-9b77-f9094824019b', 'TypeId'='aad1e80c-3b84-11e1-9d69-04064824019b', 'Builder'='DEAN', 'Model'='Motto 4', 'QOH'='2', 'Cost'='1100,00', 'Price'='1399,99', 'Received'='01.03.2012 00:00:00'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='d8cc9b56-3b86-11e1-8c9d-ba084824019b', 'TypeId'='b4c1cc10-3b84-11e1-9049-08064824019b', 'Builder'='FENDER', 'Model'='FR-50', 'QOH'='1', 'Cost'='300,00', 'Price'='499,99', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='39da7148-3b87-11e1-b0cf-00094824019b', 'TypeId'='93acb710-3b84-11e1-bc0f-8a054824019b', 'Builder'='FENDER', 'Model'='Mandolin', 'QOH'='2', 'Cost'='170,00', 'Price'='299,99', 'Received'='01.02.2012 00:00:00'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='91748922-3b85-11e1-890e-02074824019b', 'TypeId'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Builder'='FENDER', 'Model'='Jazzmaster', 'QOH'='2', 'Cost'='563,87', 'Price'='1136,83', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='c13f7d96-3b86-11e1-8458-81084824019b', 'TypeId'='b4c1cc10-3b84-11e1-9049-08064824019b', 'Builder'='FENDER', 'Model'='FR-50CE', 'QOH'='2', 'Cost'='650,00', 'Price'='999,99', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:08:49 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='f7119cc8-3b87-11e1-9ba8-2e0a4824019b', 'TypeId'='aad1e80c-3b84-11e1-9d69-04064824019b', 'Builder'='GIBSON', 'Model'='SG Standard', 'QOH'='4', 'Cost'='2000,00', 'Price'='2419,99', 'Received'='01.02.2012 00:00:00'}
+2012.07.13 12:08:49 DEBUG [1] - more......
+2012.07.13 12:08:49 DEBUG [1] - executing flush
+2012.07.13 12:08:49 DEBUG [1] - registering flush begin
+2012.07.13 12:08:49 DEBUG [1] - registering flush end
+2012.07.13 12:08:49 DEBUG [1] - post flush
+2012.07.13 12:08:49 DEBUG [1] - before transaction completion
+2012.07.13 12:08:49 DEBUG [1] - IDbTransaction Committed
+2012.07.13 12:08:49 DEBUG [1] - transaction completion
+2012.07.13 12:08:49 DEBUG [1] - aggressively releasing database connection
+2012.07.13 12:08:49 DEBUG [1] - Closing connection
+2012.07.13 12:08:49 DEBUG [1] - IDbTransaction disposed.
+2012.07.13 12:12:33 INFO  [1] - NHibernate 3.3.1.4000 (3.3.1.4000)
+2012.07.13 12:12:33 INFO  [1] - Bytecode provider name : lcg
+2012.07.13 12:12:33 INFO  [1] - Using reflection optimizer
+2012.07.13 12:12:33 INFO  [1] - Searching for mapped documents in assembly: NHibernate.GuitarStore
+2012.07.13 12:12:33 INFO  [1] - Mapping resource: NHibernate.GuitarStore.Mapping.Guitar.hbm.xml
+2012.07.13 12:12:33 INFO  [1] - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2012.07.13 12:12:33 INFO  [1] - Mapping class: NHibernate.GuitarStore.Common.Guitar -> GUITAR
+2012.07.13 12:12:33 DEBUG [1] - Mapped property: Id -> ID, type: Guid
+2012.07.13 12:12:33 DEBUG [1] - Mapped property: Type -> TYPE, type: String
+2012.07.13 12:12:33 DEBUG [1] - Mapped property: Inventory, type: System.Collections.Generic.ICollection`1[[NHibernate.GuitarStore.Common.Inventory, NHibernate.GuitarStore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]](NHibernate.GuitarStore.Common.Guitar.Inventory)
+2012.07.13 12:12:33 INFO  [1] - Mapping resource: NHibernate.GuitarStore.Mapping.Inventory.hbm.xml
+2012.07.13 12:12:33 INFO  [1] - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2012.07.13 12:12:33 INFO  [1] - Mapping class: NHibernate.GuitarStore.Common.Inventory -> INVENTORY
+2012.07.13 12:12:33 DEBUG [1] - Mapped property: Id -> ID, type: Guid
+2012.07.13 12:12:33 DEBUG [1] - Mapped property: TypeId -> TYPEID, type: Guid
+2012.07.13 12:12:33 DEBUG [1] - Mapped property: Builder -> BUILDER, type: String
+2012.07.13 12:12:33 DEBUG [1] - Mapped property: Model -> MODEL, type: String
+2012.07.13 12:12:33 DEBUG [1] - Mapped property: QOH -> QOH, type: Int32
+2012.07.13 12:12:33 DEBUG [1] - Mapped property: Cost -> COST, type: Decimal
+2012.07.13 12:12:33 DEBUG [1] - Mapped property: Price -> PRICE, type: Decimal
+2012.07.13 12:12:33 DEBUG [1] - Mapped property: Received -> RECEIVED, type: DateTime
+2012.07.13 12:12:33 INFO  [1] - checking mappings queue
+2012.07.13 12:12:33 INFO  [1] - processing one-to-many association mappings
+2012.07.13 12:12:33 DEBUG [1] - Second pass for collection: NHibernate.GuitarStore.Common.Guitar.Inventory
+2012.07.13 12:12:33 INFO  [1] - mapping collection: NHibernate.GuitarStore.Common.Guitar.Inventory -> INVENTORY
+2012.07.13 12:12:33 DEBUG [1] - Mapped collection key: TYPEID, one-to-many: NHibernate.GuitarStore.Common.Inventory
+2012.07.13 12:12:33 INFO  [1] - processing one-to-one association property references
+2012.07.13 12:12:33 INFO  [1] - processing foreign key constraints
+2012.07.13 12:12:33 DEBUG [1] - resolving reference to class: NHibernate.GuitarStore.Common.Guitar
+2012.07.13 12:12:33 INFO  [1] - processing filters (second pass)
+2012.07.13 12:12:33 INFO  [1] - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2012.07.13 12:12:33 INFO  [1] - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2012.07.13 12:12:33 INFO  [1] - Using dialect defined converter
+2012.07.13 12:12:33 INFO  [1] - Generate SQL with comments: disabled
+2012.07.13 12:12:33 INFO  [1] - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012.07.13 12:12:33 INFO  [1] - Configuring ConnectionProvider
+2012.07.13 12:12:33 INFO  [1] - setting ADO.NET command timeout to 15 seconds
+2012.07.13 12:12:33 INFO  [1] - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2012.07.13 12:12:33 INFO  [1] - Optimize cache for minimal puts: False
+2012.07.13 12:12:33 INFO  [1] - Connection release mode: auto
+2012.07.13 12:12:33 INFO  [1] - Default batch fetch size: 1
+2012.07.13 12:12:33 INFO  [1] - echoing all SQL to stdout
+2012.07.13 12:12:33 INFO  [1] - Statistics: disabled
+2012.07.13 12:12:33 INFO  [1] - Deleted entity synthetic identifier rollback: disabled
+2012.07.13 12:12:33 INFO  [1] - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2012.07.13 12:12:33 INFO  [1] - Query language substitutions: {'true'='1', 'false'='0', 'yes'=''Y'', 'no'=''N''}
+2012.07.13 12:12:33 INFO  [1] - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012.07.13 12:12:33 INFO  [1] - Order SQL inserts for batching: enabled
+2012.07.13 12:12:33 DEBUG [1] - Wrap result sets: disabled
+2012.07.13 12:12:33 INFO  [1] - Batcher factory: NHibernate.AdoNet.SqlClientBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2012.07.13 12:12:33 INFO  [1] - Using Isolation Level: ReadCommitted
+2012.07.13 12:12:33 INFO  [1] - Default entity-mode: Poco
+2012.07.13 12:12:33 INFO  [1] - Named query checking : enabled
+2012.07.13 12:12:33 INFO  [1] - building session factory
+2012.07.13 12:12:33 DEBUG [1] - Session factory constructed with filter configurations : {}
+2012.07.13 12:12:33 DEBUG [1] - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'bytecode.provider'='lcg', 'connection.connection_string_name'='GuitarStore', 'dialect'='NHibernate.Dialect.MsSql2008Dialect, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'connection.driver_class'='NHibernate.Driver.SqlClientDriver, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'connection.isolation'='ReadCommitted', 'show_sql'='true', 'command_timeout'='15'}
+2012.07.13 12:12:33 DEBUG [1] - Obtaining IDbConnection from Driver
+2012.07.13 12:12:33 DEBUG [1] - Closing connection
+2012.07.13 12:12:33 DEBUG [1] - No custom accessors found for entity: NHibernate.GuitarStore.Common.Guitar
+2012.07.13 12:12:33 DEBUG [1] - No custom accessors found for entity: NHibernate.GuitarStore.Common.Guitar
+2012.07.13 12:12:33 DEBUG [1] - Create Instantiator using optimizer for:NHibernate.GuitarStore.Common.Guitar
+2012.07.13 12:12:33 DEBUG [1] - No custom accessors found for entity: NHibernate.GuitarStore.Common.Inventory
+2012.07.13 12:12:33 DEBUG [1] - No custom accessors found for entity: NHibernate.GuitarStore.Common.Inventory
+2012.07.13 12:12:33 DEBUG [1] - Create Instantiator using optimizer for:NHibernate.GuitarStore.Common.Inventory
+2012.07.13 12:12:33 DEBUG [1] - Static SQL for collection: NHibernate.GuitarStore.Common.Guitar.Inventory
+2012.07.13 12:12:33 DEBUG [1] -  Row insert: UPDATE INVENTORY SET TYPEID = ? WHERE ID = ?
+2012.07.13 12:12:33 DEBUG [1] -  Row delete: UPDATE INVENTORY SET TYPEID = null WHERE TYPEID = ? AND ID = ?
+2012.07.13 12:12:33 DEBUG [1] -  One-shot delete: UPDATE INVENTORY SET TYPEID = null WHERE TYPEID = ?
+2012.07.13 12:12:33 DEBUG [1] - Static SQL for entity: NHibernate.GuitarStore.Common.Guitar
+2012.07.13 12:12:33 DEBUG [1] -  Version select: SELECT ID FROM GUITAR WHERE ID = ?
+2012.07.13 12:12:33 DEBUG [1] -  Snapshot select: SELECT guitar_.ID, guitar_.TYPE as TYPE0_ FROM GUITAR guitar_ WHERE guitar_.ID=?
+2012.07.13 12:12:33 DEBUG [1] -  Insert 0: INSERT INTO GUITAR (TYPE, ID) VALUES (?, ?)
+2012.07.13 12:12:33 DEBUG [1] -  Update 0: UPDATE GUITAR SET TYPE = ? WHERE ID = ?
+2012.07.13 12:12:33 DEBUG [1] -  Delete 0: DELETE FROM GUITAR WHERE ID = ?
+2012.07.13 12:12:33 DEBUG [1] - Static select for entity NHibernate.GuitarStore.Common.Guitar: SELECT guitar0_.ID as ID0_0_, guitar0_.TYPE as TYPE0_0_ FROM GUITAR guitar0_ WHERE guitar0_.ID=?
+2012.07.13 12:12:33 DEBUG [1] - Static select for entity NHibernate.GuitarStore.Common.Guitar: SELECT guitar0_.ID as ID0_0_, guitar0_.TYPE as TYPE0_0_ FROM GUITAR guitar0_ WHERE guitar0_.ID=?
+2012.07.13 12:12:33 DEBUG [1] - Static select for entity NHibernate.GuitarStore.Common.Guitar: SELECT guitar0_.ID as ID0_0_, guitar0_.TYPE as TYPE0_0_ FROM GUITAR guitar0_ with (updlock, rowlock) WHERE guitar0_.ID=?
+2012.07.13 12:12:33 DEBUG [1] - Static select for entity NHibernate.GuitarStore.Common.Guitar: SELECT guitar0_.ID as ID0_0_, guitar0_.TYPE as TYPE0_0_ FROM GUITAR guitar0_ with (updlock, rowlock, nowait) WHERE guitar0_.ID=?
+2012.07.13 12:12:33 DEBUG [1] - Static select for entity NHibernate.GuitarStore.Common.Guitar: SELECT guitar0_.ID as ID0_0_, guitar0_.TYPE as TYPE0_0_ FROM GUITAR guitar0_ with (updlock, rowlock) WHERE guitar0_.ID=?
+2012.07.13 12:12:33 DEBUG [1] - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity NHibernate.GuitarStore.Common.Guitar: SELECT guitar0_.ID as ID0_0_, guitar0_.TYPE as TYPE0_0_ FROM GUITAR guitar0_ WHERE guitar0_.ID=?
+2012.07.13 12:12:33 DEBUG [1] - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity NHibernate.GuitarStore.Common.Guitar: SELECT guitar0_.ID as ID0_0_, guitar0_.TYPE as TYPE0_0_ FROM GUITAR guitar0_ WHERE guitar0_.ID=?
+2012.07.13 12:12:33 DEBUG [1] - Static SQL for entity: NHibernate.GuitarStore.Common.Inventory
+2012.07.13 12:12:33 DEBUG [1] -  Version select: SELECT ID FROM INVENTORY WHERE ID = ?
+2012.07.13 12:12:33 DEBUG [1] -  Snapshot select: SELECT inventory_.ID, inventory_.TYPEID as TYPEID1_, inventory_.BUILDER as BUILDER1_, inventory_.MODEL as MODEL1_, inventory_.QOH as QOH1_, inventory_.COST as COST1_, inventory_.PRICE as PRICE1_, inventory_.RECEIVED as RECEIVED1_ FROM INVENTORY inventory_ WHERE inventory_.ID=?
+2012.07.13 12:12:33 DEBUG [1] -  Insert 0: INSERT INTO INVENTORY (TYPEID, BUILDER, MODEL, QOH, COST, PRICE, RECEIVED, ID) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2012.07.13 12:12:33 DEBUG [1] -  Update 0: UPDATE INVENTORY SET TYPEID = ?, BUILDER = ?, MODEL = ?, QOH = ?, COST = ?, PRICE = ?, RECEIVED = ? WHERE ID = ?
+2012.07.13 12:12:33 DEBUG [1] -  Delete 0: DELETE FROM INVENTORY WHERE ID = ?
+2012.07.13 12:12:33 DEBUG [1] - Static select for entity NHibernate.GuitarStore.Common.Inventory: SELECT inventory0_.ID as ID1_0_, inventory0_.TYPEID as TYPEID1_0_, inventory0_.BUILDER as BUILDER1_0_, inventory0_.MODEL as MODEL1_0_, inventory0_.QOH as QOH1_0_, inventory0_.COST as COST1_0_, inventory0_.PRICE as PRICE1_0_, inventory0_.RECEIVED as RECEIVED1_0_ FROM INVENTORY inventory0_ WHERE inventory0_.ID=?
+2012.07.13 12:12:33 DEBUG [1] - Static select for entity NHibernate.GuitarStore.Common.Inventory: SELECT inventory0_.ID as ID1_0_, inventory0_.TYPEID as TYPEID1_0_, inventory0_.BUILDER as BUILDER1_0_, inventory0_.MODEL as MODEL1_0_, inventory0_.QOH as QOH1_0_, inventory0_.COST as COST1_0_, inventory0_.PRICE as PRICE1_0_, inventory0_.RECEIVED as RECEIVED1_0_ FROM INVENTORY inventory0_ WHERE inventory0_.ID=?
+2012.07.13 12:12:33 DEBUG [1] - Static select for entity NHibernate.GuitarStore.Common.Inventory: SELECT inventory0_.ID as ID1_0_, inventory0_.TYPEID as TYPEID1_0_, inventory0_.BUILDER as BUILDER1_0_, inventory0_.MODEL as MODEL1_0_, inventory0_.QOH as QOH1_0_, inventory0_.COST as COST1_0_, inventory0_.PRICE as PRICE1_0_, inventory0_.RECEIVED as RECEIVED1_0_ FROM INVENTORY inventory0_ with (updlock, rowlock) WHERE inventory0_.ID=?
+2012.07.13 12:12:33 DEBUG [1] - Static select for entity NHibernate.GuitarStore.Common.Inventory: SELECT inventory0_.ID as ID1_0_, inventory0_.TYPEID as TYPEID1_0_, inventory0_.BUILDER as BUILDER1_0_, inventory0_.MODEL as MODEL1_0_, inventory0_.QOH as QOH1_0_, inventory0_.COST as COST1_0_, inventory0_.PRICE as PRICE1_0_, inventory0_.RECEIVED as RECEIVED1_0_ FROM INVENTORY inventory0_ with (updlock, rowlock, nowait) WHERE inventory0_.ID=?
+2012.07.13 12:12:33 DEBUG [1] - Static select for entity NHibernate.GuitarStore.Common.Inventory: SELECT inventory0_.ID as ID1_0_, inventory0_.TYPEID as TYPEID1_0_, inventory0_.BUILDER as BUILDER1_0_, inventory0_.MODEL as MODEL1_0_, inventory0_.QOH as QOH1_0_, inventory0_.COST as COST1_0_, inventory0_.PRICE as PRICE1_0_, inventory0_.RECEIVED as RECEIVED1_0_ FROM INVENTORY inventory0_ with (updlock, rowlock) WHERE inventory0_.ID=?
+2012.07.13 12:12:33 DEBUG [1] - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity NHibernate.GuitarStore.Common.Inventory: SELECT inventory0_.ID as ID1_0_, inventory0_.TYPEID as TYPEID1_0_, inventory0_.BUILDER as BUILDER1_0_, inventory0_.MODEL as MODEL1_0_, inventory0_.QOH as QOH1_0_, inventory0_.COST as COST1_0_, inventory0_.PRICE as PRICE1_0_, inventory0_.RECEIVED as RECEIVED1_0_ FROM INVENTORY inventory0_ WHERE inventory0_.ID=?
+2012.07.13 12:12:33 DEBUG [1] - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity NHibernate.GuitarStore.Common.Inventory: SELECT inventory0_.ID as ID1_0_, inventory0_.TYPEID as TYPEID1_0_, inventory0_.BUILDER as BUILDER1_0_, inventory0_.MODEL as MODEL1_0_, inventory0_.QOH as QOH1_0_, inventory0_.COST as COST1_0_, inventory0_.PRICE as PRICE1_0_, inventory0_.RECEIVED as RECEIVED1_0_ FROM INVENTORY inventory0_ WHERE inventory0_.ID=?
+2012.07.13 12:12:33 DEBUG [1] - Static select for one-to-many NHibernate.GuitarStore.Common.Guitar.Inventory: SELECT inventory0_.TYPEID as TYPEID1_, inventory0_.ID as ID1_, inventory0_.ID as ID1_0_, inventory0_.TYPEID as TYPEID1_0_, inventory0_.BUILDER as BUILDER1_0_, inventory0_.MODEL as MODEL1_0_, inventory0_.QOH as QOH1_0_, inventory0_.COST as COST1_0_, inventory0_.PRICE as PRICE1_0_, inventory0_.RECEIVED as RECEIVED1_0_ FROM INVENTORY inventory0_ WHERE inventory0_.TYPEID=?
+2012.07.13 12:12:33 DEBUG [1] - initializing class SessionFactoryObjectFactory
+2012.07.13 12:12:33 DEBUG [1] - registered: 9969060bf8494f539e690a6cf4e9d520(unnamed)
+2012.07.13 12:12:33 INFO  [1] - no name configured
+2012.07.13 12:12:33 DEBUG [1] - Instantiated session factory
+2012.07.13 12:12:33 DEBUG [1] - Checking 0 named HQL queries
+2012.07.13 12:12:33 DEBUG [1] - Checking 0 named SQL queries
+2012.07.13 12:12:33 DEBUG [1] - [session-id=3e9f8c5b-af6e-4d79-b2f8-0e4d64686ac1] opened session at timestamp: 634777783539, for session factory: [/9969060bf8494f539e690a6cf4e9d520]
+2012.07.13 12:12:33 DEBUG [1] - Begin (ReadCommitted)
+2012.07.13 12:12:33 DEBUG [1] - Obtaining IDbConnection from Driver
+2012.07.13 12:12:33 DEBUG [1] - put criteria= alias=this0_
+2012.07.13 12:12:33 DEBUG [1] - Opened new IDbCommand, open IDbCommands: 1
+2012.07.13 12:12:33 DEBUG [1] - Building an IDbCommand object for the SqlString: SELECT this_.ID as ID0_0_, this_.TYPE as TYPE0_0_ FROM GUITAR this_
+2012.07.13 12:12:34 INFO  [1] - SELECT this_.ID as ID0_0_, this_.TYPE as TYPE0_0_ FROM GUITAR this_
+2012.07.13 12:12:34 DEBUG [1] - SELECT this_.ID as ID0_0_, this_.TYPE as TYPE0_0_ FROM GUITAR this_
+2012.07.13 12:12:34 DEBUG [1] - Enlist Command
+2012.07.13 12:12:34 DEBUG [1] - ExecuteReader took 0 ms
+2012.07.13 12:12:34 DEBUG [1] - Opened IDataReader, open IDataReaders: 1
+2012.07.13 12:12:34 DEBUG [1] - processing result set
+2012.07.13 12:12:34 DEBUG [1] - result set row: 0
+2012.07.13 12:12:34 DEBUG [1] - returning 'aad1e80c-3b84-11e1-9d69-04064824019b' as column: ID0_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#aad1e80c-3b84-11e1-9d69-04064824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#aad1e80c-3b84-11e1-9d69-04064824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#aad1e80c-3b84-11e1-9d69-04064824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'BASS' as column: TYPE0_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 1
+2012.07.13 12:12:34 DEBUG [1] - returning 'b4c1cc10-3b84-11e1-9049-08064824019b' as column: ID0_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#b4c1cc10-3b84-11e1-9049-08064824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#b4c1cc10-3b84-11e1-9049-08064824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#b4c1cc10-3b84-11e1-9049-08064824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'RESONATOR' as column: TYPE0_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 2
+2012.07.13 12:12:34 DEBUG [1] - returning 'c16f4faa-3b84-11e1-8beb-39064824019b' as column: ID0_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#c16f4faa-3b84-11e1-8beb-39064824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#c16f4faa-3b84-11e1-8beb-39064824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#c16f4faa-3b84-11e1-8beb-39064824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'CLASSICAL' as column: TYPE0_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 3
+2012.07.13 12:12:34 DEBUG [1] - returning 'ca18634e-3b84-11e1-b39b-3a064824019b' as column: ID0_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#ca18634e-3b84-11e1-b39b-3a064824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#ca18634e-3b84-11e1-b39b-3a064824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#ca18634e-3b84-11e1-b39b-3a064824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning '7-STRING' as column: TYPE0_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 4
+2012.07.13 12:12:34 DEBUG [1] - returning 'd3263308-3b84-11e1-ab10-3e064824019b' as column: ID0_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#d3263308-3b84-11e1-ab10-3e064824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#d3263308-3b84-11e1-ab10-3e064824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#d3263308-3b84-11e1-ab10-3e064824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'LEFT-HANDED' as column: TYPE0_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 5
+2012.07.13 12:12:34 DEBUG [1] - returning '676ea654-3b84-11e1-8625-71054824019b' as column: ID0_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#676ea654-3b84-11e1-8625-71054824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#676ea654-3b84-11e1-8625-71054824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#676ea654-3b84-11e1-8625-71054824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'STELL' as column: TYPE0_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 6
+2012.07.13 12:12:34 DEBUG [1] - returning '7d9f1d1e-3b84-11e1-8ed6-85054824019b' as column: ID0_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#7d9f1d1e-3b84-11e1-8ed6-85054824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#7d9f1d1e-3b84-11e1-8ed6-85054824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#7d9f1d1e-3b84-11e1-8ed6-85054824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning '12-STRING' as column: TYPE0_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 7
+2012.07.13 12:12:34 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: ID0_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#87ab8ebe-3b84-11e1-8f53-86054824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#87ab8ebe-3b84-11e1-8f53-86054824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#87ab8ebe-3b84-11e1-8f53-86054824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'ELECTRIC' as column: TYPE0_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 8
+2012.07.13 12:12:34 DEBUG [1] - returning '93acb710-3b84-11e1-bc0f-8a054824019b' as column: ID0_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#93acb710-3b84-11e1-bc0f-8a054824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#93acb710-3b84-11e1-bc0f-8a054824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#93acb710-3b84-11e1-bc0f-8a054824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'ACOUSTIC' as column: TYPE0_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 9
+2012.07.13 12:12:34 DEBUG [1] - returning 'a0d86ec0-3b84-11e1-a1ef-fe054824019b' as column: ID0_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Guitar#a0d86ec0-3b84-11e1-a1ef-fe054824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Guitar#a0d86ec0-3b84-11e1-a1ef-fe054824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Guitar#a0d86ec0-3b84-11e1-a1ef-fe054824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'DOUBLE-NECK' as column: TYPE0_0_
+2012.07.13 12:12:34 DEBUG [1] - done processing result set (10 rows)
+2012.07.13 12:12:34 DEBUG [1] - running NHybridDataReader.Dispose()
+2012.07.13 12:12:34 DEBUG [1] - Closed IDataReader, open IDataReaders :0
+2012.07.13 12:12:34 DEBUG [1] - DataReader was closed after 21 ms
+2012.07.13 12:12:34 DEBUG [1] - Closed IDbCommand, open IDbCommands: 0
+2012.07.13 12:12:34 DEBUG [1] - total objects hydrated: 10
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#aad1e80c-3b84-11e1-9d69-04064824019b]
+2012.07.13 12:12:34 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#aad1e80c-3b84-11e1-9d69-04064824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#b4c1cc10-3b84-11e1-9049-08064824019b]
+2012.07.13 12:12:34 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#b4c1cc10-3b84-11e1-9049-08064824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#c16f4faa-3b84-11e1-8beb-39064824019b]
+2012.07.13 12:12:34 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#c16f4faa-3b84-11e1-8beb-39064824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#ca18634e-3b84-11e1-b39b-3a064824019b]
+2012.07.13 12:12:34 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#ca18634e-3b84-11e1-b39b-3a064824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#d3263308-3b84-11e1-ab10-3e064824019b]
+2012.07.13 12:12:34 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#d3263308-3b84-11e1-ab10-3e064824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#676ea654-3b84-11e1-8625-71054824019b]
+2012.07.13 12:12:34 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#676ea654-3b84-11e1-8625-71054824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#7d9f1d1e-3b84-11e1-8ed6-85054824019b]
+2012.07.13 12:12:34 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#7d9f1d1e-3b84-11e1-8ed6-85054824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#87ab8ebe-3b84-11e1-8f53-86054824019b]
+2012.07.13 12:12:34 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#87ab8ebe-3b84-11e1-8f53-86054824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#93acb710-3b84-11e1-bc0f-8a054824019b]
+2012.07.13 12:12:34 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#93acb710-3b84-11e1-bc0f-8a054824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Guitar#a0d86ec0-3b84-11e1-a1ef-fe054824019b]
+2012.07.13 12:12:34 DEBUG [1] - creating collection wrapper:[NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Guitar#a0d86ec0-3b84-11e1-a1ef-fe054824019b]
+2012.07.13 12:12:34 DEBUG [1] - initializing non-lazy collections
+2012.07.13 12:12:34 DEBUG [1] - Start Commit
+2012.07.13 12:12:34 DEBUG [1] - flushing session
+2012.07.13 12:12:34 DEBUG [1] - processing flush-time cascades
+2012.07.13 12:12:34 DEBUG [1] - dirty checking collections
+2012.07.13 12:12:34 DEBUG [1] - Flushing entities and processing referenced collections
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Processing unreferenced collections
+2012.07.13 12:12:34 DEBUG [1] - Scheduling collection removes/(re)creates/updates
+2012.07.13 12:12:34 DEBUG [1] - Flushed: 0 insertions, 0 updates, 0 deletions to 10 objects
+2012.07.13 12:12:34 DEBUG [1] - Flushed: 0 (re)creations, 0 updates, 0 removals to 10 collections
+2012.07.13 12:12:34 DEBUG [1] - listing entities:
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='aad1e80c-3b84-11e1-9d69-04064824019b', 'Type'='BASS', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='b4c1cc10-3b84-11e1-9049-08064824019b', 'Type'='RESONATOR', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='c16f4faa-3b84-11e1-8beb-39064824019b', 'Type'='CLASSICAL', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='ca18634e-3b84-11e1-b39b-3a064824019b', 'Type'='7-STRING', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='d3263308-3b84-11e1-ab10-3e064824019b', 'Type'='LEFT-HANDED', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='676ea654-3b84-11e1-8625-71054824019b', 'Type'='STELL', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='7d9f1d1e-3b84-11e1-8ed6-85054824019b', 'Type'='12-STRING', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Type'='ELECTRIC', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='93acb710-3b84-11e1-bc0f-8a054824019b', 'Type'='ACOUSTIC', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='a0d86ec0-3b84-11e1-a1ef-fe054824019b', 'Type'='DOUBLE-NECK', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - executing flush
+2012.07.13 12:12:34 DEBUG [1] - registering flush begin
+2012.07.13 12:12:34 DEBUG [1] - registering flush end
+2012.07.13 12:12:34 DEBUG [1] - post flush
+2012.07.13 12:12:34 DEBUG [1] - before transaction completion
+2012.07.13 12:12:34 DEBUG [1] - IDbTransaction Committed
+2012.07.13 12:12:34 DEBUG [1] - transaction completion
+2012.07.13 12:12:34 DEBUG [1] - aggressively releasing database connection
+2012.07.13 12:12:34 DEBUG [1] - Closing connection
+2012.07.13 12:12:34 DEBUG [1] - IDbTransaction disposed.
+2012.07.13 12:12:34 DEBUG [1] - Begin (ReadCommitted)
+2012.07.13 12:12:34 DEBUG [1] - Obtaining IDbConnection from Driver
+2012.07.13 12:12:34 DEBUG [1] - put criteria=
+Builder asc alias=this0_
+2012.07.13 12:12:34 DEBUG [1] - returning alias=this_ for criteria=
+Builder asc
+2012.07.13 12:12:34 DEBUG [1] - flushing session
+2012.07.13 12:12:34 DEBUG [1] - processing flush-time cascades
+2012.07.13 12:12:34 DEBUG [1] - dirty checking collections
+2012.07.13 12:12:34 DEBUG [1] - Flushing entities and processing referenced collections
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Processing unreferenced collections
+2012.07.13 12:12:34 DEBUG [1] - Scheduling collection removes/(re)creates/updates
+2012.07.13 12:12:34 DEBUG [1] - Flushed: 0 insertions, 0 updates, 0 deletions to 10 objects
+2012.07.13 12:12:34 DEBUG [1] - Flushed: 0 (re)creations, 0 updates, 0 removals to 10 collections
+2012.07.13 12:12:34 DEBUG [1] - listing entities:
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='aad1e80c-3b84-11e1-9d69-04064824019b', 'Type'='BASS', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='b4c1cc10-3b84-11e1-9049-08064824019b', 'Type'='RESONATOR', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='c16f4faa-3b84-11e1-8beb-39064824019b', 'Type'='CLASSICAL', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='ca18634e-3b84-11e1-b39b-3a064824019b', 'Type'='7-STRING', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='d3263308-3b84-11e1-ab10-3e064824019b', 'Type'='LEFT-HANDED', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='676ea654-3b84-11e1-8625-71054824019b', 'Type'='STELL', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='7d9f1d1e-3b84-11e1-8ed6-85054824019b', 'Type'='12-STRING', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Type'='ELECTRIC', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='93acb710-3b84-11e1-bc0f-8a054824019b', 'Type'='ACOUSTIC', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='a0d86ec0-3b84-11e1-a1ef-fe054824019b', 'Type'='DOUBLE-NECK', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - Dont need to execute flush
+2012.07.13 12:12:34 DEBUG [1] - Opened new IDbCommand, open IDbCommands: 1
+2012.07.13 12:12:34 DEBUG [1] - Building an IDbCommand object for the SqlString: SELECT this_.ID as ID1_0_, this_.TYPEID as TYPEID1_0_, this_.BUILDER as BUILDER1_0_, this_.MODEL as MODEL1_0_, this_.QOH as QOH1_0_, this_.COST as COST1_0_, this_.PRICE as PRICE1_0_, this_.RECEIVED as RECEIVED1_0_ FROM INVENTORY this_ ORDER BY this_.BUILDER asc
+2012.07.13 12:12:34 INFO  [1] - SELECT this_.ID as ID1_0_, this_.TYPEID as TYPEID1_0_, this_.BUILDER as BUILDER1_0_, this_.MODEL as MODEL1_0_, this_.QOH as QOH1_0_, this_.COST as COST1_0_, this_.PRICE as PRICE1_0_, this_.RECEIVED as RECEIVED1_0_ FROM INVENTORY this_ ORDER BY this_.BUILDER asc
+2012.07.13 12:12:34 DEBUG [1] - SELECT this_.ID as ID1_0_, this_.TYPEID as TYPEID1_0_, this_.BUILDER as BUILDER1_0_, this_.MODEL as MODEL1_0_, this_.QOH as QOH1_0_, this_.COST as COST1_0_, this_.PRICE as PRICE1_0_, this_.RECEIVED as RECEIVED1_0_ FROM INVENTORY this_ ORDER BY this_.BUILDER asc
+2012.07.13 12:12:34 DEBUG [1] - Enlist Command
+2012.07.13 12:12:34 DEBUG [1] - ExecuteReader took 0 ms
+2012.07.13 12:12:34 DEBUG [1] - Opened IDataReader, open IDataReaders: 1
+2012.07.13 12:12:34 DEBUG [1] - processing result set
+2012.07.13 12:12:34 DEBUG [1] - result set row: 0
+2012.07.13 12:12:34 DEBUG [1] - returning '5adfb8b2-3b87-11e1-8535-25094824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#5adfb8b2-3b87-11e1-8535-25094824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#5adfb8b2-3b87-11e1-8535-25094824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#5adfb8b2-3b87-11e1-8535-25094824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'a0d86ec0-3b84-11e1-a1ef-fe054824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'AGILE' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'Valkyrie HC' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '390,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '589,95' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 1
+2012.07.13 12:12:34 DEBUG [1] - returning '179f06e0-3b85-11e1-98d4-71064824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#179f06e0-3b85-11e1-98d4-71064824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#179f06e0-3b85-11e1-98d4-71064824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#179f06e0-3b85-11e1-98d4-71064824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'DEAN' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'Mustaine VMNT' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2900,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '3499,49' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.02.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 2
+2012.07.13 12:12:34 DEBUG [1] - returning '36d1ab80-3b85-11e1-830b-8e064824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#36d1ab80-3b85-11e1-830b-8e064824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#36d1ab80-3b85-11e1-830b-8e064824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#36d1ab80-3b85-11e1-830b-8e064824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'DEAN' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'Dimebag Camo' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1274,85' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2973,30' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.04.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 3
+2012.07.13 12:12:34 DEBUG [1] - returning 'aa6e67ea-3b85-11e1-abdf-10074824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#aa6e67ea-3b85-11e1-abdf-10074824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#aa6e67ea-3b85-11e1-abdf-10074824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#aa6e67ea-3b85-11e1-abdf-10074824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'DEAN' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'Razorback' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '3' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1863,25' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '4197,60' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 4
+2012.07.13 12:12:34 DEBUG [1] - returning '213b8334-3b87-11e1-8d50-f3084824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#213b8334-3b87-11e1-8d50-f3084824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#213b8334-3b87-11e1-8d50-f3084824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#213b8334-3b87-11e1-8d50-f3084824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning '93acb710-3b84-11e1-bc0f-8a054824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'DEAN' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'Axcess Quilt' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1300,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1699,99' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.03.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 5
+2012.07.13 12:12:34 DEBUG [1] - returning 'ba90b680-3b87-11e1-9b77-f9094824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#ba90b680-3b87-11e1-9b77-f9094824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#ba90b680-3b87-11e1-9b77-f9094824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#ba90b680-3b87-11e1-9b77-f9094824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'aad1e80c-3b84-11e1-9d69-04064824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'DEAN' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'Motto 4' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1100,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1399,99' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.03.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 6
+2012.07.13 12:12:34 DEBUG [1] - returning 'd8cc9b56-3b86-11e1-8c9d-ba084824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#d8cc9b56-3b86-11e1-8c9d-ba084824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#d8cc9b56-3b86-11e1-8c9d-ba084824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#d8cc9b56-3b86-11e1-8c9d-ba084824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'b4c1cc10-3b84-11e1-9049-08064824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'FENDER' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'FR-50' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '300,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '499,99' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 7
+2012.07.13 12:12:34 DEBUG [1] - returning '39da7148-3b87-11e1-b0cf-00094824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#39da7148-3b87-11e1-b0cf-00094824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#39da7148-3b87-11e1-b0cf-00094824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#39da7148-3b87-11e1-b0cf-00094824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning '93acb710-3b84-11e1-bc0f-8a054824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'FENDER' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'Mandolin' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '170,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '299,99' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.02.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 8
+2012.07.13 12:12:34 DEBUG [1] - returning '91748922-3b85-11e1-890e-02074824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#91748922-3b85-11e1-890e-02074824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#91748922-3b85-11e1-890e-02074824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#91748922-3b85-11e1-890e-02074824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'FENDER' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'Jazzmaster' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '563,87' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1136,83' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 9
+2012.07.13 12:12:34 DEBUG [1] - returning 'c13f7d96-3b86-11e1-8458-81084824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#c13f7d96-3b86-11e1-8458-81084824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#c13f7d96-3b86-11e1-8458-81084824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#c13f7d96-3b86-11e1-8458-81084824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'b4c1cc10-3b84-11e1-9049-08064824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'FENDER' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'FR-50CE' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '650,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '999,99' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 10
+2012.07.13 12:12:34 DEBUG [1] - returning 'f7119cc8-3b87-11e1-9ba8-2e0a4824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#f7119cc8-3b87-11e1-9ba8-2e0a4824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#f7119cc8-3b87-11e1-9ba8-2e0a4824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#f7119cc8-3b87-11e1-9ba8-2e0a4824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'aad1e80c-3b84-11e1-9d69-04064824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'GIBSON' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'SG Standard' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '4' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2000,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2419,99' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.02.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 11
+2012.07.13 12:12:34 DEBUG [1] - returning 'c28bd0ec-3b85-11e1-9cf7-34074824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#c28bd0ec-3b85-11e1-9cf7-34074824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#c28bd0ec-3b85-11e1-9cf7-34074824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#c28bd0ec-3b85-11e1-9cf7-34074824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'GIBSON' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'Les Paul Custom' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '8' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1372,92' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '3847,80' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.01.1900 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 12
+2012.07.13 12:12:34 DEBUG [1] - returning 'f9c1e1f4-3b86-11e1-8503-d1084824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#f9c1e1f4-3b86-11e1-8503-d1084824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#f9c1e1f4-3b86-11e1-8503-d1084824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#f9c1e1f4-3b86-11e1-8503-d1084824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning '93acb710-3b84-11e1-bc0f-8a054824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'GIBSON' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'SJ-250 Monarch' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '20000,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '25771,99' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.02.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 13
+2012.07.13 12:12:34 DEBUG [1] - returning '83dea62a-3b86-11e1-ba6a-36084824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#83dea62a-3b86-11e1-ba6a-36084824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#83dea62a-3b86-11e1-ba6a-36084824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#83dea62a-3b86-11e1-ba6a-36084824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'c16f4faa-3b84-11e1-8beb-39064824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'IBANEZ' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'GA3' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '900,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1199,99' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 14
+2012.07.13 12:12:34 DEBUG [1] - returning '10ca2a4a-3b88-11e1-bdc9-380a4824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#10ca2a4a-3b88-11e1-bdc9-380a4824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#10ca2a4a-3b88-11e1-bdc9-380a4824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#10ca2a4a-3b88-11e1-bdc9-380a4824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'aad1e80c-3b84-11e1-9d69-04064824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'IBANEZ' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'GSRM20' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '800,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1299,99' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 15
+2012.07.13 12:12:34 DEBUG [1] - returning 'dedf9418-3b85-11e1-9732-50074824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#dedf9418-3b85-11e1-9732-50074824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#dedf9418-3b85-11e1-9732-50074824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#dedf9418-3b85-11e1-9732-50074824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'IBANEZ' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'S7420' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '882,59' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2168,75' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.02.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 16
+2012.07.13 12:12:34 DEBUG [1] - returning '4f80db82-3b86-11e1-a1fb-16084824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#4f80db82-3b86-11e1-a1fb-16084824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#4f80db82-3b86-11e1-a1fb-16084824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#4f80db82-3b86-11e1-a1fb-16084824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'c16f4faa-3b84-11e1-8beb-39064824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'IBANEZ' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'GA5' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1200,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1399,00' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.02.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 17
+2012.07.13 12:12:34 DEBUG [1] - returning 'fce1858e-3b85-11e1-8151-6d074824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#fce1858e-3b85-11e1-8151-6d074824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#fce1858e-3b85-11e1-8151-6d074824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#fce1858e-3b85-11e1-8151-6d074824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'IBANEZ' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'DN500K' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '441,29' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1224,29' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 18
+2012.07.13 12:12:34 DEBUG [1] - returning '53058592-3b85-11e1-b03c-aa064824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#53058592-3b85-11e1-b03c-aa064824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#53058592-3b85-11e1-b03c-aa064824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#53058592-3b85-11e1-b03c-aa064824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning '87ab8ebe-3b84-11e1-8f53-86054824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'IBANEZ' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'SA260FM' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1176,78' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2622,61' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 19
+2012.07.13 12:12:34 DEBUG [1] - returning '39f91810-3b86-11e1-aae8-fd074824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#39f91810-3b86-11e1-aae8-fd074824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#39f91810-3b86-11e1-aae8-fd074824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#39f91810-3b86-11e1-aae8-fd074824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'c16f4faa-3b84-11e1-8beb-39064824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'PAVAN' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'TP-10' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '8' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '350,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '499,00' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 20
+2012.07.13 12:12:34 DEBUG [1] - returning '6aca4cd4-3b86-11e1-a6e1-27084824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#6aca4cd4-3b86-11e1-a6e1-27084824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#6aca4cd4-3b86-11e1-a6e1-27084824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#6aca4cd4-3b86-11e1-a6e1-27084824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'c16f4faa-3b84-11e1-8beb-39064824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'TAKAMINE' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'C132S' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '11' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '450,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '899,49' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 21
+2012.07.13 12:12:34 DEBUG [1] - returning '7dd4cce0-3b87-11e1-bd64-a1094824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#7dd4cce0-3b87-11e1-bd64-a1094824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#7dd4cce0-3b87-11e1-bd64-a1094824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#7dd4cce0-3b87-11e1-bd64-a1094824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning '7d9f1d1e-3b84-11e1-8ed6-85054824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'TAYLOR' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '856ce' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '3200,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '4599,99' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.03.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 22
+2012.07.13 12:12:34 DEBUG [1] - returning '98081bc2-3b86-11e1-80b4-5e084824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#98081bc2-3b86-11e1-80b4-5e084824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#98081bc2-3b86-11e1-80b4-5e084824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#98081bc2-3b86-11e1-80b4-5e084824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'c16f4faa-3b84-11e1-8beb-39064824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'TAYLOR' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'NS74ce' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2000,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2399,99' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.01.1900 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 23
+2012.07.13 12:12:34 DEBUG [1] - returning '99883364-3b87-11e1-96eb-db094824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#99883364-3b87-11e1-96eb-db094824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#99883364-3b87-11e1-96eb-db094824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#99883364-3b87-11e1-96eb-db094824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning '7d9f1d1e-3b84-11e1-8ed6-85054824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'TAYLOR' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '455ce' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1300,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '2099,99' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.01.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - result set row: 24
+2012.07.13 12:12:34 DEBUG [1] - returning '228f3876-3b86-11e1-a42d-f1074824019b' as column: ID1_0_
+2012.07.13 12:12:34 DEBUG [1] - result row: EntityKey[NHibernate.GuitarStore.Common.Inventory#228f3876-3b86-11e1-a42d-f1074824019b]
+2012.07.13 12:12:34 DEBUG [1] - Initializing object from DataReader: [NHibernate.GuitarStore.Common.Inventory#228f3876-3b86-11e1-a42d-f1074824019b]
+2012.07.13 12:12:34 DEBUG [1] - Hydrating entity: [NHibernate.GuitarStore.Common.Inventory#228f3876-3b86-11e1-a42d-f1074824019b]
+2012.07.13 12:12:34 DEBUG [1] - returning 'c16f4faa-3b84-11e1-8beb-39064824019b' as column: TYPEID1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'TAYLOR' as column: BUILDER1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning 'NS24e' as column: MODEL1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '6' as column: QOH1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1000,00' as column: COST1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '1299,99' as column: PRICE1_0_
+2012.07.13 12:12:34 DEBUG [1] - returning '01.03.2012 00:00:00' as column: RECEIVED1_0_
+2012.07.13 12:12:34 DEBUG [1] - done processing result set (25 rows)
+2012.07.13 12:12:34 DEBUG [1] - running NHybridDataReader.Dispose()
+2012.07.13 12:12:34 DEBUG [1] - Closed IDataReader, open IDataReaders :0
+2012.07.13 12:12:34 DEBUG [1] - DataReader was closed after 17 ms
+2012.07.13 12:12:34 DEBUG [1] - Closed IDbCommand, open IDbCommands: 0
+2012.07.13 12:12:34 DEBUG [1] - total objects hydrated: 25
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#5adfb8b2-3b87-11e1-8535-25094824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#5adfb8b2-3b87-11e1-8535-25094824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#179f06e0-3b85-11e1-98d4-71064824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#179f06e0-3b85-11e1-98d4-71064824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#36d1ab80-3b85-11e1-830b-8e064824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#36d1ab80-3b85-11e1-830b-8e064824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#aa6e67ea-3b85-11e1-abdf-10074824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#aa6e67ea-3b85-11e1-abdf-10074824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#213b8334-3b87-11e1-8d50-f3084824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#213b8334-3b87-11e1-8d50-f3084824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#ba90b680-3b87-11e1-9b77-f9094824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#ba90b680-3b87-11e1-9b77-f9094824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#d8cc9b56-3b86-11e1-8c9d-ba084824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#d8cc9b56-3b86-11e1-8c9d-ba084824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#39da7148-3b87-11e1-b0cf-00094824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#39da7148-3b87-11e1-b0cf-00094824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#91748922-3b85-11e1-890e-02074824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#91748922-3b85-11e1-890e-02074824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#c13f7d96-3b86-11e1-8458-81084824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#c13f7d96-3b86-11e1-8458-81084824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#f7119cc8-3b87-11e1-9ba8-2e0a4824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#f7119cc8-3b87-11e1-9ba8-2e0a4824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#c28bd0ec-3b85-11e1-9cf7-34074824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#c28bd0ec-3b85-11e1-9cf7-34074824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#f9c1e1f4-3b86-11e1-8503-d1084824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#f9c1e1f4-3b86-11e1-8503-d1084824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#83dea62a-3b86-11e1-ba6a-36084824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#83dea62a-3b86-11e1-ba6a-36084824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#10ca2a4a-3b88-11e1-bdc9-380a4824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#10ca2a4a-3b88-11e1-bdc9-380a4824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#dedf9418-3b85-11e1-9732-50074824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#dedf9418-3b85-11e1-9732-50074824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#4f80db82-3b86-11e1-a1fb-16084824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#4f80db82-3b86-11e1-a1fb-16084824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#fce1858e-3b85-11e1-8151-6d074824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#fce1858e-3b85-11e1-8151-6d074824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#53058592-3b85-11e1-b03c-aa064824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#53058592-3b85-11e1-b03c-aa064824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#39f91810-3b86-11e1-aae8-fd074824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#39f91810-3b86-11e1-aae8-fd074824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#6aca4cd4-3b86-11e1-a6e1-27084824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#6aca4cd4-3b86-11e1-a6e1-27084824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#7dd4cce0-3b87-11e1-bd64-a1094824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#7dd4cce0-3b87-11e1-bd64-a1094824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#98081bc2-3b86-11e1-80b4-5e084824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#98081bc2-3b86-11e1-80b4-5e084824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#99883364-3b87-11e1-96eb-db094824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#99883364-3b87-11e1-96eb-db094824019b]
+2012.07.13 12:12:34 DEBUG [1] - resolving associations for [NHibernate.GuitarStore.Common.Inventory#228f3876-3b86-11e1-a42d-f1074824019b]
+2012.07.13 12:12:34 DEBUG [1] - done materializing entity [NHibernate.GuitarStore.Common.Inventory#228f3876-3b86-11e1-a42d-f1074824019b]
+2012.07.13 12:12:34 DEBUG [1] - initializing non-lazy collections
+2012.07.13 12:12:34 DEBUG [1] - Start Commit
+2012.07.13 12:12:34 DEBUG [1] - flushing session
+2012.07.13 12:12:34 DEBUG [1] - processing flush-time cascades
+2012.07.13 12:12:34 DEBUG [1] - dirty checking collections
+2012.07.13 12:12:34 DEBUG [1] - Flushing entities and processing referenced collections
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b] (uninitialized)
+2012.07.13 12:12:34 DEBUG [1] - Processing unreferenced collections
+2012.07.13 12:12:34 DEBUG [1] - Scheduling collection removes/(re)creates/updates
+2012.07.13 12:12:34 DEBUG [1] - Flushed: 0 insertions, 0 updates, 0 deletions to 35 objects
+2012.07.13 12:12:34 DEBUG [1] - Flushed: 0 (re)creations, 0 updates, 0 removals to 10 collections
+2012.07.13 12:12:34 DEBUG [1] - listing entities:
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='aad1e80c-3b84-11e1-9d69-04064824019b', 'Type'='BASS', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='b4c1cc10-3b84-11e1-9049-08064824019b', 'Type'='RESONATOR', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='c16f4faa-3b84-11e1-8beb-39064824019b', 'Type'='CLASSICAL', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='ca18634e-3b84-11e1-b39b-3a064824019b', 'Type'='7-STRING', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='d3263308-3b84-11e1-ab10-3e064824019b', 'Type'='LEFT-HANDED', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='676ea654-3b84-11e1-8625-71054824019b', 'Type'='STELL', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='7d9f1d1e-3b84-11e1-8ed6-85054824019b', 'Type'='12-STRING', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Type'='ELECTRIC', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='93acb710-3b84-11e1-bc0f-8a054824019b', 'Type'='ACOUSTIC', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='a0d86ec0-3b84-11e1-a1ef-fe054824019b', 'Type'='DOUBLE-NECK', 'Inventory'='<uninitialized>'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='5adfb8b2-3b87-11e1-8535-25094824019b', 'TypeId'='a0d86ec0-3b84-11e1-a1ef-fe054824019b', 'Builder'='AGILE', 'Model'='Valkyrie HC', 'QOH'='1', 'Cost'='390,00', 'Price'='589,95', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='179f06e0-3b85-11e1-98d4-71064824019b', 'TypeId'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Builder'='DEAN', 'Model'='Mustaine VMNT', 'QOH'='1', 'Cost'='2900,00', 'Price'='3499,49', 'Received'='01.02.2012 00:00:00'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='36d1ab80-3b85-11e1-830b-8e064824019b', 'TypeId'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Builder'='DEAN', 'Model'='Dimebag Camo', 'QOH'='2', 'Cost'='1274,85', 'Price'='2973,30', 'Received'='01.04.2012 00:00:00'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='aa6e67ea-3b85-11e1-abdf-10074824019b', 'TypeId'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Builder'='DEAN', 'Model'='Razorback', 'QOH'='3', 'Cost'='1863,25', 'Price'='4197,60', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='213b8334-3b87-11e1-8d50-f3084824019b', 'TypeId'='93acb710-3b84-11e1-bc0f-8a054824019b', 'Builder'='DEAN', 'Model'='Axcess Quilt', 'QOH'='2', 'Cost'='1300,00', 'Price'='1699,99', 'Received'='01.03.2012 00:00:00'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='ba90b680-3b87-11e1-9b77-f9094824019b', 'TypeId'='aad1e80c-3b84-11e1-9d69-04064824019b', 'Builder'='DEAN', 'Model'='Motto 4', 'QOH'='2', 'Cost'='1100,00', 'Price'='1399,99', 'Received'='01.03.2012 00:00:00'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='d8cc9b56-3b86-11e1-8c9d-ba084824019b', 'TypeId'='b4c1cc10-3b84-11e1-9049-08064824019b', 'Builder'='FENDER', 'Model'='FR-50', 'QOH'='1', 'Cost'='300,00', 'Price'='499,99', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='39da7148-3b87-11e1-b0cf-00094824019b', 'TypeId'='93acb710-3b84-11e1-bc0f-8a054824019b', 'Builder'='FENDER', 'Model'='Mandolin', 'QOH'='2', 'Cost'='170,00', 'Price'='299,99', 'Received'='01.02.2012 00:00:00'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='91748922-3b85-11e1-890e-02074824019b', 'TypeId'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Builder'='FENDER', 'Model'='Jazzmaster', 'QOH'='2', 'Cost'='563,87', 'Price'='1136,83', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='c13f7d96-3b86-11e1-8458-81084824019b', 'TypeId'='b4c1cc10-3b84-11e1-9049-08064824019b', 'Builder'='FENDER', 'Model'='FR-50CE', 'QOH'='2', 'Cost'='650,00', 'Price'='999,99', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:12:34 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='f7119cc8-3b87-11e1-9ba8-2e0a4824019b', 'TypeId'='aad1e80c-3b84-11e1-9d69-04064824019b', 'Builder'='GIBSON', 'Model'='SG Standard', 'QOH'='4', 'Cost'='2000,00', 'Price'='2419,99', 'Received'='01.02.2012 00:00:00'}
+2012.07.13 12:12:34 DEBUG [1] - more......
+2012.07.13 12:12:34 DEBUG [1] - executing flush
+2012.07.13 12:12:34 DEBUG [1] - registering flush begin
+2012.07.13 12:12:34 DEBUG [1] - registering flush end
+2012.07.13 12:12:34 DEBUG [1] - post flush
+2012.07.13 12:12:34 DEBUG [1] - before transaction completion
+2012.07.13 12:12:34 DEBUG [1] - IDbTransaction Committed
+2012.07.13 12:12:34 DEBUG [1] - transaction completion
+2012.07.13 12:12:34 DEBUG [1] - aggressively releasing database connection
+2012.07.13 12:12:34 DEBUG [1] - Closing connection
+2012.07.13 12:12:34 DEBUG [1] - IDbTransaction disposed.
+2012.07.13 12:13:38 DEBUG [1] - Begin (ReadCommitted)
+2012.07.13 12:13:38 DEBUG [1] - Obtaining IDbConnection from Driver
+2012.07.13 12:13:38 DEBUG [1] - put criteria=TypeId = Guid@-878939596(hash) alias=this0_
+2012.07.13 12:13:38 DEBUG [1] - returning alias=this_ for criteria=TypeId = Guid@-878939596(hash)
+2012.07.13 12:13:38 DEBUG [1] - flushing session
+2012.07.13 12:13:38 DEBUG [1] - processing flush-time cascades
+2012.07.13 12:13:38 DEBUG [1] - dirty checking collections
+2012.07.13 12:13:38 DEBUG [1] - Flushing entities and processing referenced collections
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Processing unreferenced collections
+2012.07.13 12:13:38 DEBUG [1] - Scheduling collection removes/(re)creates/updates
+2012.07.13 12:13:38 DEBUG [1] - Flushed: 0 insertions, 0 updates, 0 deletions to 35 objects
+2012.07.13 12:13:38 DEBUG [1] - Flushed: 0 (re)creations, 0 updates, 0 removals to 10 collections
+2012.07.13 12:13:38 DEBUG [1] - listing entities:
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='aad1e80c-3b84-11e1-9d69-04064824019b', 'Type'='BASS', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='b4c1cc10-3b84-11e1-9049-08064824019b', 'Type'='RESONATOR', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='c16f4faa-3b84-11e1-8beb-39064824019b', 'Type'='CLASSICAL', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='ca18634e-3b84-11e1-b39b-3a064824019b', 'Type'='7-STRING', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='d3263308-3b84-11e1-ab10-3e064824019b', 'Type'='LEFT-HANDED', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='676ea654-3b84-11e1-8625-71054824019b', 'Type'='STELL', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='7d9f1d1e-3b84-11e1-8ed6-85054824019b', 'Type'='12-STRING', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Type'='ELECTRIC', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='93acb710-3b84-11e1-bc0f-8a054824019b', 'Type'='ACOUSTIC', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='a0d86ec0-3b84-11e1-a1ef-fe054824019b', 'Type'='DOUBLE-NECK', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='5adfb8b2-3b87-11e1-8535-25094824019b', 'TypeId'='a0d86ec0-3b84-11e1-a1ef-fe054824019b', 'Builder'='AGILE', 'Model'='Valkyrie HC', 'QOH'='1', 'Cost'='390,00', 'Price'='589,95', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='179f06e0-3b85-11e1-98d4-71064824019b', 'TypeId'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Builder'='DEAN', 'Model'='Mustaine VMNT', 'QOH'='1', 'Cost'='2900,00', 'Price'='3499,49', 'Received'='01.02.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='36d1ab80-3b85-11e1-830b-8e064824019b', 'TypeId'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Builder'='DEAN', 'Model'='Dimebag Camo', 'QOH'='2', 'Cost'='1274,85', 'Price'='2973,30', 'Received'='01.04.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='aa6e67ea-3b85-11e1-abdf-10074824019b', 'TypeId'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Builder'='DEAN', 'Model'='Razorback', 'QOH'='3', 'Cost'='1863,25', 'Price'='4197,60', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='213b8334-3b87-11e1-8d50-f3084824019b', 'TypeId'='93acb710-3b84-11e1-bc0f-8a054824019b', 'Builder'='DEAN', 'Model'='Axcess Quilt', 'QOH'='2', 'Cost'='1300,00', 'Price'='1699,99', 'Received'='01.03.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='ba90b680-3b87-11e1-9b77-f9094824019b', 'TypeId'='aad1e80c-3b84-11e1-9d69-04064824019b', 'Builder'='DEAN', 'Model'='Motto 4', 'QOH'='2', 'Cost'='1100,00', 'Price'='1399,99', 'Received'='01.03.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='d8cc9b56-3b86-11e1-8c9d-ba084824019b', 'TypeId'='b4c1cc10-3b84-11e1-9049-08064824019b', 'Builder'='FENDER', 'Model'='FR-50', 'QOH'='1', 'Cost'='300,00', 'Price'='499,99', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='39da7148-3b87-11e1-b0cf-00094824019b', 'TypeId'='93acb710-3b84-11e1-bc0f-8a054824019b', 'Builder'='FENDER', 'Model'='Mandolin', 'QOH'='2', 'Cost'='170,00', 'Price'='299,99', 'Received'='01.02.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='91748922-3b85-11e1-890e-02074824019b', 'TypeId'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Builder'='FENDER', 'Model'='Jazzmaster', 'QOH'='2', 'Cost'='563,87', 'Price'='1136,83', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='c13f7d96-3b86-11e1-8458-81084824019b', 'TypeId'='b4c1cc10-3b84-11e1-9049-08064824019b', 'Builder'='FENDER', 'Model'='FR-50CE', 'QOH'='2', 'Cost'='650,00', 'Price'='999,99', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='f7119cc8-3b87-11e1-9ba8-2e0a4824019b', 'TypeId'='aad1e80c-3b84-11e1-9d69-04064824019b', 'Builder'='GIBSON', 'Model'='SG Standard', 'QOH'='4', 'Cost'='2000,00', 'Price'='2419,99', 'Received'='01.02.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - more......
+2012.07.13 12:13:38 DEBUG [1] - Dont need to execute flush
+2012.07.13 12:13:38 DEBUG [1] - Opened new IDbCommand, open IDbCommands: 1
+2012.07.13 12:13:38 DEBUG [1] - Building an IDbCommand object for the SqlString: SELECT this_.ID as ID1_0_, this_.TYPEID as TYPEID1_0_, this_.BUILDER as BUILDER1_0_, this_.MODEL as MODEL1_0_, this_.QOH as QOH1_0_, this_.COST as COST1_0_, this_.PRICE as PRICE1_0_, this_.RECEIVED as RECEIVED1_0_ FROM INVENTORY this_ WHERE this_.TYPEID = ?
+2012.07.13 12:13:38 DEBUG [1] - binding 'ca18634e-3b84-11e1-b39b-3a064824019b' to parameter: 0
+2012.07.13 12:13:38 INFO  [1] - SELECT this_.ID as ID1_0_, this_.TYPEID as TYPEID1_0_, this_.BUILDER as BUILDER1_0_, this_.MODEL as MODEL1_0_, this_.QOH as QOH1_0_, this_.COST as COST1_0_, this_.PRICE as PRICE1_0_, this_.RECEIVED as RECEIVED1_0_ FROM INVENTORY this_ WHERE this_.TYPEID = @p0
+2012.07.13 12:13:38 DEBUG [1] - SELECT this_.ID as ID1_0_, this_.TYPEID as TYPEID1_0_, this_.BUILDER as BUILDER1_0_, this_.MODEL as MODEL1_0_, this_.QOH as QOH1_0_, this_.COST as COST1_0_, this_.PRICE as PRICE1_0_, this_.RECEIVED as RECEIVED1_0_ FROM INVENTORY this_ WHERE this_.TYPEID = @p0;@p0 = ca18634e-3b84-11e1-b39b-3a064824019b [Type: Guid (0)]
+2012.07.13 12:13:38 DEBUG [1] - Enlist Command
+2012.07.13 12:13:38 DEBUG [1] - ExecuteReader took 0 ms
+2012.07.13 12:13:38 DEBUG [1] - Opened IDataReader, open IDataReaders: 1
+2012.07.13 12:13:38 DEBUG [1] - processing result set
+2012.07.13 12:13:38 DEBUG [1] - done processing result set (0 rows)
+2012.07.13 12:13:38 DEBUG [1] - running NHybridDataReader.Dispose()
+2012.07.13 12:13:38 DEBUG [1] - Closed IDataReader, open IDataReaders :0
+2012.07.13 12:13:38 DEBUG [1] - DataReader was closed after 0 ms
+2012.07.13 12:13:38 DEBUG [1] - Closed IDbCommand, open IDbCommands: 0
+2012.07.13 12:13:38 DEBUG [1] - total objects hydrated: 0
+2012.07.13 12:13:38 DEBUG [1] - initializing non-lazy collections
+2012.07.13 12:13:38 DEBUG [1] - Start Commit
+2012.07.13 12:13:38 DEBUG [1] - flushing session
+2012.07.13 12:13:38 DEBUG [1] - processing flush-time cascades
+2012.07.13 12:13:38 DEBUG [1] - dirty checking collections
+2012.07.13 12:13:38 DEBUG [1] - Flushing entities and processing referenced collections
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#aad1e80c-3b84-11e1-9d69-04064824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#b4c1cc10-3b84-11e1-9049-08064824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#c16f4faa-3b84-11e1-8beb-39064824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#ca18634e-3b84-11e1-b39b-3a064824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#d3263308-3b84-11e1-ab10-3e064824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#676ea654-3b84-11e1-8625-71054824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#7d9f1d1e-3b84-11e1-8ed6-85054824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#87ab8ebe-3b84-11e1-8f53-86054824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#93acb710-3b84-11e1-bc0f-8a054824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Collection found: [NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b], was: [NHibernate.GuitarStore.Common.Guitar.Inventory#a0d86ec0-3b84-11e1-a1ef-fe054824019b] (uninitialized)
+2012.07.13 12:13:38 DEBUG [1] - Processing unreferenced collections
+2012.07.13 12:13:38 DEBUG [1] - Scheduling collection removes/(re)creates/updates
+2012.07.13 12:13:38 DEBUG [1] - Flushed: 0 insertions, 0 updates, 0 deletions to 35 objects
+2012.07.13 12:13:38 DEBUG [1] - Flushed: 0 (re)creations, 0 updates, 0 removals to 10 collections
+2012.07.13 12:13:38 DEBUG [1] - listing entities:
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='aad1e80c-3b84-11e1-9d69-04064824019b', 'Type'='BASS', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='b4c1cc10-3b84-11e1-9049-08064824019b', 'Type'='RESONATOR', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='c16f4faa-3b84-11e1-8beb-39064824019b', 'Type'='CLASSICAL', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='ca18634e-3b84-11e1-b39b-3a064824019b', 'Type'='7-STRING', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='d3263308-3b84-11e1-ab10-3e064824019b', 'Type'='LEFT-HANDED', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='676ea654-3b84-11e1-8625-71054824019b', 'Type'='STELL', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='7d9f1d1e-3b84-11e1-8ed6-85054824019b', 'Type'='12-STRING', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Type'='ELECTRIC', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='93acb710-3b84-11e1-bc0f-8a054824019b', 'Type'='ACOUSTIC', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Guitar{'Id'='a0d86ec0-3b84-11e1-a1ef-fe054824019b', 'Type'='DOUBLE-NECK', 'Inventory'='<uninitialized>'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='5adfb8b2-3b87-11e1-8535-25094824019b', 'TypeId'='a0d86ec0-3b84-11e1-a1ef-fe054824019b', 'Builder'='AGILE', 'Model'='Valkyrie HC', 'QOH'='1', 'Cost'='390,00', 'Price'='589,95', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='179f06e0-3b85-11e1-98d4-71064824019b', 'TypeId'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Builder'='DEAN', 'Model'='Mustaine VMNT', 'QOH'='1', 'Cost'='2900,00', 'Price'='3499,49', 'Received'='01.02.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='36d1ab80-3b85-11e1-830b-8e064824019b', 'TypeId'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Builder'='DEAN', 'Model'='Dimebag Camo', 'QOH'='2', 'Cost'='1274,85', 'Price'='2973,30', 'Received'='01.04.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='aa6e67ea-3b85-11e1-abdf-10074824019b', 'TypeId'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Builder'='DEAN', 'Model'='Razorback', 'QOH'='3', 'Cost'='1863,25', 'Price'='4197,60', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='213b8334-3b87-11e1-8d50-f3084824019b', 'TypeId'='93acb710-3b84-11e1-bc0f-8a054824019b', 'Builder'='DEAN', 'Model'='Axcess Quilt', 'QOH'='2', 'Cost'='1300,00', 'Price'='1699,99', 'Received'='01.03.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='ba90b680-3b87-11e1-9b77-f9094824019b', 'TypeId'='aad1e80c-3b84-11e1-9d69-04064824019b', 'Builder'='DEAN', 'Model'='Motto 4', 'QOH'='2', 'Cost'='1100,00', 'Price'='1399,99', 'Received'='01.03.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='d8cc9b56-3b86-11e1-8c9d-ba084824019b', 'TypeId'='b4c1cc10-3b84-11e1-9049-08064824019b', 'Builder'='FENDER', 'Model'='FR-50', 'QOH'='1', 'Cost'='300,00', 'Price'='499,99', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='39da7148-3b87-11e1-b0cf-00094824019b', 'TypeId'='93acb710-3b84-11e1-bc0f-8a054824019b', 'Builder'='FENDER', 'Model'='Mandolin', 'QOH'='2', 'Cost'='170,00', 'Price'='299,99', 'Received'='01.02.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='91748922-3b85-11e1-890e-02074824019b', 'TypeId'='87ab8ebe-3b84-11e1-8f53-86054824019b', 'Builder'='FENDER', 'Model'='Jazzmaster', 'QOH'='2', 'Cost'='563,87', 'Price'='1136,83', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='c13f7d96-3b86-11e1-8458-81084824019b', 'TypeId'='b4c1cc10-3b84-11e1-9049-08064824019b', 'Builder'='FENDER', 'Model'='FR-50CE', 'QOH'='2', 'Cost'='650,00', 'Price'='999,99', 'Received'='01.01.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - NHibernate.GuitarStore.Common.Inventory{'Id'='f7119cc8-3b87-11e1-9ba8-2e0a4824019b', 'TypeId'='aad1e80c-3b84-11e1-9d69-04064824019b', 'Builder'='GIBSON', 'Model'='SG Standard', 'QOH'='4', 'Cost'='2000,00', 'Price'='2419,99', 'Received'='01.02.2012 00:00:00'}
+2012.07.13 12:13:38 DEBUG [1] - more......
+2012.07.13 12:13:38 DEBUG [1] - executing flush
+2012.07.13 12:13:38 DEBUG [1] - registering flush begin
+2012.07.13 12:13:38 DEBUG [1] - registering flush end
+2012.07.13 12:13:38 DEBUG [1] - post flush
+2012.07.13 12:13:38 DEBUG [1] - before transaction completion
+2012.07.13 12:13:38 DEBUG [1] - IDbTransaction Committed
+2012.07.13 12:13:38 DEBUG [1] - transaction completion
+2012.07.13 12:13:38 DEBUG [1] - aggressively releasing database connection
+2012.07.13 12:13:38 DEBUG [1] - Closing connection
+2012.07.13 12:13:38 DEBUG [1] - IDbTransaction disposed.

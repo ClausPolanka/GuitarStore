@@ -1,9 +1,24 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateBase.cs" caret="3154" fromTop="22" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:Mapping/f:Guitar.hbm.xml" caret="0" fromTop="0" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:Common/f:Guitar.cs" caret="424" fromTop="19" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:Mapping/f:Inventory.hbm.xml" caret="793" fromTop="12" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:App.config" caret="1018" fromTop="8" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateInventory.cs" caret="940" fromTop="14" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:Common/f:Inventory.cs" caret="525" fromTop="18" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateBase.cs" caret="1398" fromTop="14" />
   </RecentFiles>
   <RecentEdits>
-    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateBase.cs" caret="1682" fromTop="17" />
-    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateBase.cs" caret="1682" fromTop="17" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateBase.cs" caret="2020" fromTop="2" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:Common/f:Inventory.cs" caret="525" fromTop="18" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:Common/f:Guitar.cs" caret="291" fromTop="10" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateInventory.cs" caret="906" fromTop="14" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateInventory.cs" caret="1575" fromTop="32" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateInventory.cs" caret="1284" fromTop="16" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:Common/f:Guitar.cs" caret="173" fromTop="9" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateBase.cs" caret="1144" fromTop="16" />
+    <File id="AF4A4018-70A4-44F4-B1B5-89B1CF42179C/d:DataAccess/f:NHibernateBase.cs" caret="210" fromTop="8" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:App.config" caret="267" fromTop="5" />
+    <File id="82EC6327-1BA1-4EE2-87B2-661AAC7DFFD0/f:App.config" caret="1604" fromTop="24" />
   </RecentEdits>
 </RecentFiles>

@@ -5,6 +5,7 @@ using NHibernate.Cfg;
 using NHibernate.Connection;
 using NHibernate.Dialect;
 using NHibernate.Driver;
+using NHibernate.SqlCommand;
 
 namespace NHibernate.GuitarStore.DataAccess
 {
@@ -38,6 +39,7 @@ namespace NHibernate.GuitarStore.DataAccess
         public NHibernateBase()
         {
             log4net.Config.XmlConfigurator.Configure();
+            ConsoleManager.Show();
         }
 
         public void Initialize(string assembly)
@@ -59,6 +61,7 @@ namespace NHibernate.GuitarStore.DataAccess
                 dbi.Timeout = 15;
             });
             Configuration.AddAssembly(assembly);
+            Configuration.SetInterceptor(new SQLInterceptor());
             return Configuration;
         }
 
@@ -78,6 +81,19 @@ namespace NHibernate.GuitarStore.DataAccess
                     throw;
                 }
             }
+        }
+    }
+
+    public class SQLInterceptor : EmptyInterceptor
+    {
+        public override SqlString OnPrepareStatement(SqlString sql)
+        {
+            Utils.NHibernateGeneratedSQL = sql.ToString();
+            Utils.QueryCounter++;
+            Console.WriteLine("=================");
+            Console.WriteLine(Utils.FormatSQL());
+            Console.WriteLine("=================");
+            return sql;
         }
     }
 }

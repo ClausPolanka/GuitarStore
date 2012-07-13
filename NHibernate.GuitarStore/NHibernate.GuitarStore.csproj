@@ -51,8 +51,10 @@
   <ItemGroup>
     <Compile Include="Common\Guitar.cs" />
     <Compile Include="Common\Inventory.cs" />
+    <Compile Include="DataAccess\ConsoleManager.cs" />
     <Compile Include="DataAccess\NHibernateBase.cs" />
     <Compile Include="DataAccess\NHibernateInventory.cs" />
+    <Compile Include="DataAccess\Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
